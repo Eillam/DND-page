@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: block;
+    width: 80vw;
+    height: 100vh;
+    background-color: coral;
+    padding-top: -10px;
+    margin: -1px;
+
+}
+
+header {
+    display: flex;
+    box-sizing: content-box;
+    justify-content: center;
+    align-content: center;
+    width: 100vw;
+    height: 20vh;
+    background-color: blue;
+    padding: 10px;
+}
+
+div .response {
+    display: flex;
+    box-sizing: content-box;
+    width: 50vw;
+    height: 50vw;
+    background-color: deeppink;
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+}
+
+.p-3 {
+    background-color: blue;
+    padding: 10px;
+    justify-content: space-around;
+    align-content: space-around;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px white;
+}
