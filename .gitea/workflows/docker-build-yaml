@@ -2,7 +2,7 @@ name: Docker build and deploy (Production)
 run-name: ${{ gitea.actor }} is deploying to production 🚀
 on: 
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   DockerBuild:
