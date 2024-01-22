@@ -42,9 +42,9 @@ jobs:
       # - name: Mark build successful (so we can deploy)
       #   if: success()
       #   run: echo success
-  # ProductionDeploy:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Redeploy portainer stack with image tag "latest"
-  #       run: curl -d "" -X POST http://192.168.1.13:9000/api/stacks/webhooks/248a74a0-1c26-4e73-99b2-1ddfcdbef33f
+  ProductionDeploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Redeploy portainer stack with image tag "latest"
+        run: curl -d "" -X POST http://192.168.1.13:9000/api/stacks/webhooks/ac6f9b8a-ebfb-41db-9a08-07300e7d73fd
         
