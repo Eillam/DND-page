@@ -46,5 +46,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Redeploy portainer stack with image tag "latest"
-        run: curl -d "" -X POST http://192.168.1.13:9000/api/stacks/webhooks/ac6f9b8a-ebfb-41db-9a08-07300e7d73fd
+        run: curl -d "" -X POST http://192.168.1.13:9000/api/stacks/webhooks/7448758f-960e-4a7f-87ed-a1769b183d2c
         
