@@ -1,0 +1,50 @@
+name: Docker build and deploy (Production)
+run-name: ${{ gitea.actor }} is deploying to production 🚀
+on: 
+  push:
+    branches: [master]
+
+jobs:
+  DockerBuild:
+    runs-on: cth-ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      # - name: Substitute Secrets
+      #   uses: Lambdaspire/action-substitute-secrets-in-file@v1.0.0
+      #   with:
+      #     #TODO: use a separate secrets file
+      #     file: src/map.js
+
+      #     # The token pattern.
+      #     # Must include the string "TOKEN".
+      #     # e.g.
+      #     #   ${TOKEN}
+      #     #   #{TOKEN}#
+      #     #   <TOKEN/>
+      #     #   <!-- TOKEN -->
+      #     tokenPattern: ${TOKEN}
+
+      #     # Passes GitHub Secrets as a JSON string to the action.
+      #     # This MUST be supplied.
+      #     # It MUST be exactly "${{ toJSON(secrets) }}".
+      #     secretsJson: ${{ toJSON(secrets) }}
+      #- name: Install Docker
+      #  run: curl -fsSL https://get.docker.com | sh
+      - name: Login to Registry (Gitea)
+        run: docker login -u Dandamann -p ${{ secrets.PERSONAL_ACCESS_TOKEN }} http://192.168.1.13:3000 
+      - name: Build Image
+        run: docker build . -t 192.168.1.13:3000/dandamann/dnd-page:1.0.${{ github.run_number }}.${{ github.run_attempt }} -t 192.168.1.13:3000/dandamann/dnd-page:latest
+      - name: Push Image
+        run: docker push 192.168.1.13:3000/dandamann/dnd-page:1.0.${{ github.run_number }}.${{ github.run_attempt }}
+      - name: Push Image (latest)
+        run: docker push 192.168.1.13:3000/dandamann/dnd-page:latest
+      # - name: Mark build successful (so we can deploy)
+      #   if: success()
+      #   run: echo success
+  # ProductionDeploy:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Redeploy portainer stack with image tag "latest"
+  #       run: curl -d "" -X POST http://192.168.1.13:9000/api/stacks/webhooks/248a74a0-1c26-4e73-99b2-1ddfcdbef33f
+        
