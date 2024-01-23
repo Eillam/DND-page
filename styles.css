@@ -14,20 +14,16 @@ header {
     text-align: center;
     width: 100%;
     height: 20%;
-    background-color: blue;
+    background: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
     padding: 50px;
     border-radius: 20px;
 }
 
-div .response {
-    display: flex;
-    box-sizing: content-box;
-    width: 50vw;
-    height: 50vw;
-    background-color: deeppink;
-    padding: 20px;
-    justify-content: center;
-    align-content: center;
+#response {
+    text-align: center; 
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .p-3 {
@@ -39,3 +35,7 @@ div .response {
     border-radius: 20px;
     box-shadow: 5px 5px rgb(214, 182, 182);
 }
+
+<link>collapse-content</link> {
+    display: none; /* Hide the content by default */
+  }

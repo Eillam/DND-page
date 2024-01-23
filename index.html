@@ -11,40 +11,70 @@
     <header><h1>
         Game Masters Friend
     </h1></header>
-    <div class="response">Response</div>
-    <p class="d-inline-flex gap-1">
-      <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
-      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
-      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
-    </p>
-    <div class="row">
-      <div class="col">
-        <div class="collapse multi-collapse" id="multiCollapseExample1">
-          <div class="card card-body">
-            <div class="container overflow-hidden text-center">
-              <div class="row gy-5">
-                <div class="col-6">
-                  <div class="p-3">Custom column padding</div>
-                </div>
-                <div class="col-6">
-                  <div class="p-3">Custom column padding</div>
-                </div>
-                <div class="col-6">
-                  <div class="p-3">Erin is cool</div>
-                </div>
-                <div class="col-6">
-                  <div class="p-3">Custom column padding</div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="alert alert-light" role="alert" id="response">
+      "Weather is the day-to-day or hour-to-hour change in the atmosphere. It includes various elements such as wind, lightning, storms, hurricanes, and tornadoes. Weather systems are the movement of warm and cold air across the globe, known as low-pressure systems and high-pressure systems. Weather can be hot, cold, wet, or dry, and it plays a significant role in our everyday lives."
+    </div>
+    <div class="container text-center">
+      <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <div class="col">
+          <div class="p-3" type="button" class="collapse-btn" onclick="toggleCollapse('collapseContent1')">Weather</div>
+           <div class="collapse-content" id="collapseContent1" style="display: none">
+           <p>This is the collapsible content that will be shown or hidden.</p>
+           </div>
         </div>
-      </div>
-      <div class="col">
-        <div class="collapse multi-collapse" id="multiCollapseExample2">
-          <div class="card card-body">
-            Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
-          </div>
+        <div class="col">
+          <div class="p-3" type="button" class="collapse-btn" onclick="toggleCollapse('collapseContent2')">Row column</div>
+          <div class="collapse-content" id="collapseContent2" style="display: none">
+            <p>This is the collapsible content that will be shown or hidden.</p>
+            </div>
+        </div>
+        <div class="col">
+          <div class="p-3" type="button" class="collapse-btn" onclick="toggleCollapse('collapseContent3')">Row column</div>
+          <div class="collapse-content" id="collapseContent3" style="display: none">
+            <p>This is the collapsible content that will be shown or hidden.</p>
+            </div>
+        </div>
+        <div class="col">
+          <div class="p-3" type="button" class="collapse-btn" onclick="toggleCollapse('collapseContent')">Row column</div>
+          <div class="collapse-content" id="collapseContent" style="display: none">
+            <p>This is the collapsible content that will be shown or hidden.</p>
+            </div>
+        </div>
+        <div class="col">
+          <div class="p-3" type="button" class="collapse-btn" onclick="toggleCollapse('collapseContent4')">Row column</div>
+          <div class="collapse-content" id="collapseContent4" style="display: none">
+            <p>This is the collapsible content that will be shown or hidden.</p>
+            </div>
+        </div>
+        <div class="col">
+          <div class="p-3" type="button" class="collapse-btn" onclick="toggleCollapse('collapseContent5')">Row column</div>
+          <div class="collapse-content" id="collapseContent5" style="display: none">
+            <p>This is the collapsible content that will be shown or hidden.</p>
+            </div>
+        </div>
+        <div class="col">
+          <div class="p-3" type="button" class="collapse-btn" onclick="toggleCollapse('collapseContent6')">Row column</div>
+          <div class="collapse-content" id="collapseContent6" style="display: none">
+            <p>This is the collapsible content that will be shown or hidden.</p>
+            </div>
+        </div>
+        <div class="col">
+          <div class="p-3" type="button" class="collapse-btn" onclick="toggleCollapse('collapseContent7')">Row column</div>
+          <div class="collapse-content" id="collapseContent7" style="display: none">
+            <p>This is the collapsible content that will be shown or hidden.</p>
+            </div>
+        </div>
+        <div class="col">
+          <div class="p-3" type="button" class="collapse-btn" onclick="toggleCollapse('collapseContent8')">Row column</div>
+          <div class="collapse-content" id="collapseContent8" style="display: none">
+            <p>This is the collapsible content that will be shown or hidden.</p>
+            </div>
+        </div>
+        <div class="col">
+          <div class="p-3" type="button" class="collapse-btn" onclick="toggleCollapse('collapseContent9')">Row column</div>
+          <div class="collapse-content" id="collapseContent9" style="display: none">
+            <p>This is the collapsible content that will be shown or hidden.</p>
+            </div>
         </div>
       </div>
     </div>
