@@ -19,10 +19,46 @@
         <div class="col">
           <div class="p-3 d-grid gap-2">
             <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContent1" aria-expanded="false" aria-controls="collapseContent1">
-              Weather
+              NPC
             </button>
             <div class="collapse collapse-content" id="collapseContent1">
-              <p>This is the collapsible content that will be shown or hidden.</p>
+              <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
+                <h5>Race</h5>
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+                <label class="btn btn-outline-danger" for="vbtn-radio1">Random</label>
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                <label class="btn btn-outline-danger" for="vbtn-radio2">Human</label>
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+                <label class="btn btn-outline-danger" for="vbtn-radio3">Elf</label>
+              </div>
+              <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
+                <h5>class</h5>
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+                <label class="btn btn-outline-danger" for="vbtn-radio1">Random</label>
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                <label class="btn btn-outline-danger" for="vbtn-radio2">Artificer</label>
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+                <label class="btn btn-outline-danger" for="vbtn-radio3">Barbarian</label>
+              </div>
+              <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
+                <h5>Alignment</h5>
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+                <label class="btn btn-outline-danger" for="vbtn-radio1">Random</label>
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                <label class="btn btn-outline-danger" for="vbtn-radio2">Good</label>
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+                <label class="btn btn-outline-danger" for="vbtn-radio3">Evil</label>
+              </div>
+              <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
+                <h5>Level</h5>
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+                <label class="btn btn-outline-danger" for="vbtn-radio1">Random</label>
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                <label class="btn btn-outline-danger" for="vbtn-radio2">1-5</label>
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+                <label class="btn btn-outline-danger" for="vbtn-radio3">6-10</label>
+              </div>
+              <input class="btn btn-primary" type="submit" value="Submit" id="NPC-Submit">
             </div>
           </div>
         </div>
@@ -32,34 +68,87 @@
               Weather
             </button>
             <div class="collapse collapse-content" id="collapseContent2">
-              <p>This is the collapsible content that will be shown or hidden.</p>
+              <h5>Geo Location</h5>
+              <button type="button" class="btn btn-primary">Coast</button>
+              <button type="button" class="btn btn-primary">Plains</button>
+              <button type="button" class="btn btn-primary">Mountains</button>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="p-3 d-grid gap-2">
-            <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContent3" aria-expanded="false" aria-controls="collapseContent1">
-              Weather
+            <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" aria-expanded="false" aria-controls="collapseContent1">
+              Towns
             </button>
-            <div class="collapse collapse-content" id="collapseContent3">
-              <p>This is the collapsible content that will be shown or hidden.</p>
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Town Size</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <button type="button" class="btn btn-primary">Small</button>
+                    <button type="button" class="btn btn-primary">Medium</button>
+                    <button type="button" class="btn btn-primary">Large</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="p-3 d-grid gap-2">
-            <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContent4" aria-expanded="false" aria-controls="collapseContent1">
-              Weather
+            <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+              Treasure
             </button>
-            <div class="collapse collapse-content" id="collapseContent4">
-              <p>This is the collapsible content that will be shown or hidden.</p>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div>
+                  Choose the type of treasure from the drop down menus.
+                </div>
+                <div class="dropdown mt-3">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Non-Magic Items
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Random</a></li>
+                    <li><a class="dropdown-item" href="#">Backpack</a></li>
+                    <li><a class="dropdown-item" href="#">Book Title</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown mt-3">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Magic Item - Single
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Random</a></li>
+                    <li><a class="dropdown-item" href="#">Common</a></li>
+                    <li><a class="dropdown-item" href="#">Rare</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown mt-3">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Hoard
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Level 1-5</a></li>
+                    <li><a class="dropdown-item" href="#">Level 6-10</a></li>
+                    <li><a class="dropdown-item" href="#">Level 1-5 including Magic Items</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="p-3 d-grid gap-2">
             <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContent5" aria-expanded="false" aria-controls="collapseContent1">
-              Weather
+              TBC
             </button>
             <div class="collapse collapse-content" id="collapseContent5">
               <p>This is the collapsible content that will be shown or hidden.</p>
@@ -69,7 +158,7 @@
         <div class="col">
           <div class="p-3 d-grid gap-2">
             <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContent6" aria-expanded="false" aria-controls="collapseContent1">
-              Weather
+              TBC
             </button>
             <div class="collapse collapse-content" id="collapseContent6">
               <p>This is the collapsible content that will be shown or hidden.</p>
@@ -79,7 +168,7 @@
         <div class="col">
           <div class="p-3 d-grid gap-2">
             <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContent7" aria-expanded="false" aria-controls="collapseContent1">
-              Weather
+              TBC
             </button>
             <div class="collapse collapse-content" id="collapseContent7">
               <p>This is the collapsible content that will be shown or hidden.</p>
@@ -89,7 +178,7 @@
         <div class="col">
           <div class="p-3 d-grid gap-2">
             <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContent8" aria-expanded="false" aria-controls="collapseContent1">
-              Weather
+              TBC
             </button>
             <div class="collapse collapse-content" id="collapseContent8">
               <p>This is the collapsible content that will be shown or hidden.</p>
@@ -99,7 +188,7 @@
         <div class="col">
           <div class="p-3 d-grid gap-2">
             <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContent9" aria-expanded="false" aria-controls="collapseContent1">
-              Weather
+              TBC
             </button>
             <div class="collapse collapse-content" id="collapseContent9">
               <p>This is the collapsible content that will be shown or hidden.</p>
@@ -109,7 +198,7 @@
         <div class="col">
           <div class="p-3 d-grid gap-2">
             <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContent10" aria-expanded="false" aria-controls="collapseContent1">
-              Weather
+              TBC
             </button>
             <div class="collapse collapse-content" id="collapseContent10">
               <p>This is the collapsible content that will be shown or hidden.</p>

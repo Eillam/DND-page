@@ -26,11 +26,20 @@ header {
     font-size: 1.5rem;
 }
 
-.collapse-content{
-  color: rgb(119, 119, 119);
+h5 {
+    color:rgb(250, 250, 250);
+    text-align: center;
 }
 
-button {
+.btn-lg {
     width: 250px;
     height: 120px;
+}
+
+.offcanvas-title {
+    color: black;
+}
+
+#NPC-Submit {
+    margin: 10px auto;
 }
