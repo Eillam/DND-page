@@ -26,7 +26,7 @@ header {
     font-size: 1.5rem;
 }
 
-.p-3 {
+.collapse-button {
     background-color: #00beef;
     padding: 10px;
     justify-content: space-around;
@@ -36,6 +36,6 @@ header {
     box-shadow: 5px 5px rgb(214, 182, 182);
 }
 
-<link>collapse-content</link> {
-    display: none; /* Hide the content by default */
-  }
+.collapse-content{
+  color: rgb(119, 119, 119);
+}
