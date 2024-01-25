@@ -18,47 +18,57 @@
       <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
         <div class="col">
           <div class="p-3 d-grid gap-2">
-            <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContent1" aria-expanded="false" aria-controls="collapseContent1">
+            <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" aria-expanded="false" aria-controls="collapseContent1">
               NPC
             </button>
-            <div class="collapse collapse-content" id="collapseContent1">
-              <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group for race">
-                <h5>Race</h5>
-                <input type="radio" class="btn-check" name="race-radio" id="NPC-race-radio-random" autocomplete="off">
-                <label class="btn btn-outline-danger" for="NPC-race-radio-random">Random</label>
-                <input type="radio" class="btn-check" name="race-radio" id="NPC-race-radio-human" autocomplete="off">
-                <label class="btn btn-outline-danger" for="NPC-race-radio-human">Human</label>
-                <input type="radio" class="btn-check" name="race-radio" id="NPC-race-radio-elf" autocomplete="off">
-                <label class="btn btn-outline-danger" for="NPC-race-radio-elf">Elf</label>
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Make your selections</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group for race">
+                      <h5>Race</h5>
+                      <input type="radio" class="btn-check" name="race-radio" id="NPC-race-radio-random" autocomplete="off">
+                      <label class="btn btn-outline-danger" for="NPC-race-radio-random">Random</label>
+                      <input type="radio" class="btn-check" name="race-radio" id="NPC-race-radio-human" autocomplete="off">
+                      <label class="btn btn-outline-danger" for="NPC-race-radio-human">Human</label>
+                      <input type="radio" class="btn-check" name="race-radio" id="NPC-race-radio-elf" autocomplete="off">
+                      <label class="btn btn-outline-danger" for="NPC-race-radio-elf">Elf</label>
+                    </div>
+                    <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group for class">
+                      <h5>class</h5>
+                      <input type="radio" class="btn-check" name="class-radio" id="npc-class-radio-random" autocomplete="off" >
+                      <label class="btn btn-outline-danger" for="npc-class-radio-random">Random</label>
+                      <input type="radio" class="btn-check" name="class-radio" id="npc-class-radio-artificer" autocomplete="off">
+                      <label class="btn btn-outline-danger" for="npc-class-radio-artificer">Artificer</label>
+                      <input type="radio" class="btn-check" name="class-radio" id="npc-class-radio-barbarian" autocomplete="off">
+                      <label class="btn btn-outline-danger" for="npc-class-radio-barbarian">Barbarian</label>
+                    </div>
+                    <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group for alignment">
+                      <h5>Alignment</h5>
+                      <input type="radio" class="btn-check" name="alignment-radio" id="npc-alignment-radio-random" autocomplete="off" >
+                      <label class="btn btn-outline-danger" for="npc-alignment-radio-random">Random</label>
+                      <input type="radio" class="btn-check" name="alignment-radio" id="npc-alignment-radio-good" autocomplete="off">
+                      <label class="btn btn-outline-danger" for="npc-alignment-radio-good">Good</label>
+                      <input type="radio" class="btn-check" name="alignment-radio" id="npc-alignment-radio-evil" autocomplete="off">
+                      <label class="btn btn-outline-danger" for="npc-alignment-radio-evil">Evil</label>
+                    </div>
+                    <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group for Level">
+                      <h5>Level</h5>
+                      <input type="radio" class="btn-check" name="level-radio" id="npc-level-radio-random" autocomplete="off">
+                      <label class="btn btn-outline-danger" for="npc-level-radio-random">Random</label>
+                      <input type="radio" class="btn-check" name="level-radio" id="npc-level-radio-1-5" autocomplete="off">
+                      <label class="btn btn-outline-danger" for="npc-level-radio-1-5">1-5</label>
+                      <input type="radio" class="btn-check" name="level-radio" id="npc-level-radio-6-10" autocomplete="off">
+                      <label class="btn btn-outline-danger" for="npc-level-radio-6-10">6-10</label>
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="Submit" id="NPC-Submit">
+                  </div>
+                </div>
               </div>
-              <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group for class">
-                <h5>class</h5>
-                <input type="radio" class="btn-check" name="class-radio" id="npc-class-radio-random" autocomplete="off" >
-                <label class="btn btn-outline-danger" for="npc-class-radio-random">Random</label>
-                <input type="radio" class="btn-check" name="class-radio" id="npc-class-radio-artificer" autocomplete="off">
-                <label class="btn btn-outline-danger" for="npc-class-radio-artificer">Artificer</label>
-                <input type="radio" class="btn-check" name="class-radio" id="npc-class-radio-barbarian" autocomplete="off">
-                <label class="btn btn-outline-danger" for="npc-class-radio-barbarian">Barbarian</label>
-              </div>
-              <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group for alignment">
-                <h5>Alignment</h5>
-                <input type="radio" class="btn-check" name="alignment-radio" id="npc-alignment-radio-random" autocomplete="off" >
-                <label class="btn btn-outline-danger" for="npc-alignment-radio-random">Random</label>
-                <input type="radio" class="btn-check" name="alignment-radio" id="npc-alignment-radio-good" autocomplete="off">
-                <label class="btn btn-outline-danger" for="npc-alignment-radio-good">Good</label>
-                <input type="radio" class="btn-check" name="alignment-radio" id="npc-alignment-radio-evil" autocomplete="off">
-                <label class="btn btn-outline-danger" for="npc-alignment-radio-evil">Evil</label>
-              </div>
-              <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group for Level">
-                <h5>Level</h5>
-                <input type="radio" class="btn-check" name="level-radio" id="npc-level-radio-random" autocomplete="off">
-                <label class="btn btn-outline-danger" for="npc-level-radio-random">Random</label>
-                <input type="radio" class="btn-check" name="level-radio" id="npc-level-radio-1-5" autocomplete="off">
-                <label class="btn btn-outline-danger" for="npc-level-radio-1-5">1-5</label>
-                <input type="radio" class="btn-check" name="level-radio" id="npc-level-radio-6-10" autocomplete="off">
-                <label class="btn btn-outline-danger" for="npc-level-radio-6-10">6-10</label>
-              </div>
-              <input class="btn btn-primary" type="submit" value="Submit" id="NPC-Submit">
             </div>
           </div>
         </div>
@@ -211,3 +221,4 @@
     <script src="./script.js"></script>
   </body>
 </html>
+
