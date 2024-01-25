@@ -126,6 +126,71 @@ var innNames = ["The Sleeping Dragon", "The Merry Maiden", "The Rusty Flagon", "
   "The Prime Provisioner",
   "The Exceptional Emporium"];
 
+  // Blacksmith
+  var blacksmith = ["The Iron Forger",
+  "Smithy's Forge",
+  "Forged Creations",
+  "Anvil & Hammer",
+  "Molten Metal Works",
+  "Ember Forge",
+  "Steel Sanctuary",
+  "Blaze & Anvil",
+  "Inferno Ironworks",
+  "Quenching Quarters",
+  "Hammer & Tongs",
+  "Sword & Steel",
+  "Firebrand Forge",
+  "Ironclad Artistry",
+  "Furnace Foundry",
+  "Raging Anvil",
+  "Tempered Tools",
+  "Mighty Metalworks",
+  "Flamecraft Forge",
+  "Bold Ironworks",
+  "Molten Mastery",
+  "Steel Symphony",
+  "Blazing Blades",
+  "Forge of Legends",
+  "Metal Maven",
+  "Thunderous Tools",
+  "Fierce Fire Forge",
+  "Iron Impact",
+  "Eternal Ember Forge",
+  "Vulcan's Vault"];
+
+  // Apothecary
+  var apothecary = ["The Alchemical Essence",
+  "Herb Haven",
+  "Elixir Emporium",
+  "Botanical Boutique",
+  "Potion Palace",
+  "Apothecary's Alcove",
+  "Healing Herbs & Tinctures",
+  "Essential Remedies",
+  "Medicinal Marvels",
+  "Nature's Pharmacy",
+  "Remedy Repository",
+  "Alchemy Aisle",
+  "Herbal Harmony",
+  "Mystic Mixtures",
+  "Wellness Wares",
+  "Aromatic Apothecary",
+  "Soothing Solutions",
+  "Botanic Blessings",
+  "Curative Charms",
+  "Enchanted Elixirs",
+  "Harmony Herbalists",
+  "Vitality Vials",
+  "Potion Provisions",
+  "Holistic Health Haven",
+  "Miracle Mixtures",
+  "Divine Draughts",
+  "Secrets of Serenity",
+  "Wholesome Remedies",
+  "Zen Zephyr Apothecary",
+  "Healer's Hideaway",
+  "Sacred Salves"];
+
 function toggleCollapse(id) {
     var content = document.getElementById(id);
     if (content.style.display === "none") {
@@ -260,18 +325,26 @@ function small() {
 }
 
 function medium() {
-  // Blacksmith
-  var blacksmith = "The Iron Forger";
-
-  // Apothecary
-  var apothecary = "The Alchemical Essence";
-
   // Array of possible names for random stores
   var randomStores = ["The Arcane Emporium", "The Tinker's Workshop", "The Herbal Haven"];
 
   // Randomly select names for the Inn and General Store
-  var randomInnName = innNames[Math.floor(Math.random() * innNames.length)];
-  var randomGeneralStoreName = generalStoreNames[Math.floor(Math.random() * generalStoreNames.length)];
+  var randomInns = [];
+  while (randomInns.length < 3) {
+  var randomIndex = Math.floor(Math.random() * innNames.length);
+  if (!randomInns.includes(randomIndex)) {
+    randomInns.push(randomIndex);
+  } 
+  }
+  
+  var randomGeneralStoreName = [];
+  while (randomGeneralStoreName.length < 3) {
+  var randomIndexStore = Math.floor(Math.random() * generalStoreNames.length);
+  if (!randomGeneralStoreName.includes(randomIndexStore)) {
+    randomGeneralStoreName.push(randomIndexStore);
+  } 
+  }
+  
 
   // Randomly select a unique location
   var randomUniqueLocation = uniqueLocations[Math.floor(Math.random() * uniqueLocations.length)];
@@ -281,13 +354,20 @@ function medium() {
   var randomStore2 = randomStores[Math.floor(Math.random() * randomStores.length)];
   var randomStore3 = randomStores[Math.floor(Math.random() * randomStores.length)];
 
+  var randomBlacksmith = blacksmith[Math.floor(Math.random() * blacksmith.length)];
+  var randomApothecary = apothecary[Math.floor(Math.random() * apothecary.length)];
+
   // Return the list of medium city locations
   var responseDiv = document.getElementById('response');
   responseDiv.innerHTML = "<ul style='list-style: none;'>" +
-                         "<li>Inn: " + randomInnName + "</li>" +
-                         "<li>General Store: " + randomGeneralStoreName + "</li>" +
-                         "<li>Blacksmith: " + blacksmith + "</li>" +
-                         "<li>Apothecary: " + apothecary + "</li>" +
+  "<li>Inn: " + innNames[randomInns[0]] + "</li>" +
+  "<li>Inn: " + innNames[randomInns[1]] + "</li>" +
+  "<li>Inn: " + innNames[randomInns[2]] + "</li>" +
+                         "<li>General Store: " + generalStoreNames[randomGeneralStoreName[0]] + "</li>" +
+                         "<li>General Store: " + generalStoreNames[randomGeneralStoreName[1]] + "</li>" +
+                         "<li>General Store: " + generalStoreNames[randomGeneralStoreName[2]] + "</li>" +
+                         "<li>Blacksmith: " + randomBlacksmith + "</li>" +
+                         "<li>Apothecary: " + randomApothecary + "</li>" +
                          "<li>Random Store 1: " + randomStore1 + "</li>" +
                          "<li>Random Store 2: " + randomStore2 + "</li>" +
                          "<li>Random Store 3: " + randomStore3 + "</li>" +
