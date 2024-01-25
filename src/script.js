@@ -939,13 +939,14 @@ while (randomStoreAndName.length < 3) {
 
   // Randomly select a unique location
   var randomUniqueLocation = uniqueLocations[Math.floor(Math.random() * uniqueLocations.length)];
-  
+  var randomTownName = townNames[Math.floor(Math.random() * townNames.length)];
   var randomBlacksmith = blacksmith[Math.floor(Math.random() * blacksmith.length)];
   var randomApothecary = apothecary[Math.floor(Math.random() * apothecary.length)];
 
   // Return the list of medium city locations
   var responseDiv = document.getElementById('response');
   responseDiv.innerHTML = "<ul style='list-style: none;'>" +
+  "<li>Town: " + randomTownName + "</li>" +
   "<li>Inn: " + innNames[randomInns[0]] + "</li>" +
   "<li>Inn: " + innNames[randomInns[1]] + "</li>" +
   "<li>Inn: " + innNames[randomInns[2]] + "</li>" +
@@ -981,7 +982,7 @@ function large() {
   }
   
   var randomStoreAndName = [];
-while (randomStoreAndName.length < 8) {
+  while (randomStoreAndName.length < 8) {
   var randomTypeIndex = Math.floor(Math.random() * mixedStoresAndNames.length);
   var randomType = mixedStoresAndNames[randomTypeIndex].Type;
   var randomNameIndex = Math.floor(Math.random() * mixedStoresAndNames[randomTypeIndex].Name.length);
@@ -991,13 +992,12 @@ while (randomStoreAndName.length < 8) {
   if (!randomStoreAndName.some(item => item.Type === randomType && item.Name === randomName)) {
     randomStoreAndName.push({ Type: randomType, Name: randomName });
   }
-}
+  }
 
   // Randomly select a unique location
   var randomUniqueLocation = uniqueLocations[Math.floor(Math.random() * uniqueLocations.length)];
+  var randomTownName = townNames[Math.floor(Math.random() * townNames.length)];
   
-  
-
   var randomBlacksmith = [];
   while (randomBlacksmith.length < 3) {
   var randomIndexSmith = Math.floor(Math.random() * blacksmith.length);
@@ -1005,8 +1005,6 @@ while (randomStoreAndName.length < 8) {
     randomBlacksmith.push(randomIndexSmith);
   } 
   }
-
-  
 
   var randomApothecary = [];
   while (randomApothecary.length < 3) {
@@ -1019,6 +1017,7 @@ while (randomStoreAndName.length < 8) {
   // Return the list of medium city locations
   var responseDiv = document.getElementById('response');
   responseDiv.innerHTML = "<ul style='list-style: none;'>" +
+  "<li>Town: " + randomTownName + "</li>" +
   "<li>Inn: " + innNames[randomInns[0]] + "</li>" +
   "<li>Inn: " + innNames[randomInns[1]] + "</li>" +
   "<li>Inn: " + innNames[randomInns[2]] + "</li>" +
@@ -1045,3 +1044,5 @@ while (randomStoreAndName.length < 8) {
                          "</ul>";
   responseDiv.style.display = "block";
 }
+   
+   
