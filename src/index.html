@@ -87,23 +87,14 @@
         </div>
         <div class="col">
           <div class="p-3 d-grid gap-2">
-            <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" aria-expanded="false" aria-controls="collapseContent1">
+            <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContent3" aria-expanded="false" aria-controls="collapseContent1">
               Towns
             </button>
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Town Size</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <button type="button" class="btn btn-primary">Small</button>
-                    <button type="button" class="btn btn-primary">Medium</button>
-                    <button type="button" class="btn btn-primary">Large</button>
-                  </div>
-                </div>
-              </div>
+            <div class="collapse collapse-content" id="collapseContent3">
+              <h5>Generation Size</h5>
+              <button type="button" class="btn btn-primary" onclick="small()">Small</button>
+              <button type="button" class="btn btn-primary" onclick="medium()">Medium</button>
+              <button type="button" class="btn btn-primary" onclick="">Large</button>
             </div>
           </div>
         </div>

@@ -1,5 +1,131 @@
 // to create my functions for the random generator
 
+// Array of possible names for the Inn
+var innNames = ["The Sleeping Dragon", "The Merry Maiden", "The Rusty Flagon", "The Golden Crown",
+  "The Drunken Unicorn",
+  "The Wandering Bard",
+  "The Lucky Leprechaun",
+  "The Cozy Chimera",
+  "The Whispering Willow",
+  "The Howling Wolf",
+  "The Dancing Dervish",
+  "The Silent Siren",
+  "The Hidden Harp",
+  "The Shattered Shield",
+  "The Fierce Falcon",
+  "The Soaring Serpent",
+  "The Crimson Crest",
+  "The Daring Dragonfly",
+  "The Mystic Mermaid",
+  "The Enchanted Elephant",
+  "The Radiant Rose",
+  "The Regal Rabbit",
+  "The Sapphire Star",
+  "The Emerald Enigma",
+  "The Golden Griffin",
+  "The Scarlet Sun",
+  "The Silver Swan",
+  "The Tranquil Turtle",
+  "The Vibrant Vixen",
+  "The Zephyr Zebra",
+  "The Whimsical Wyvern"];
+
+  // Array of possible unique locations
+  var uniqueLocations = ["the old mill: 'it's is said to be home to a coven of hags'",
+  "the abandoned church: 'rumored to be haunted by vengeful spirits'",
+  "the mysterious grove: 'said to be a portal to another realm'",
+  "the hidden cave: 'known as the lair of a fearsome dragon'",
+  "the cursed graveyard: 'where restless souls wander at night'",
+  "the forgotten tomb: 'guarded by an ancient curse'",
+  "the spectral swamp: 'where lost souls are trapped for eternity'",
+  "the forbidden forest: 'home to a pack of werewolves'",
+  "the haunted mansion: 'where no one dares to spend the night'",
+  "the cursed castle: 'rumored to be the seat of an evil sorcerer'",
+  "the shadowy alley: 'where deals with dark entities are made'",
+  "the eerie marsh: 'where mysterious lights lead travelers astray'",
+  "the desolate moor: 'where the banshee's wail can be heard'",
+  "the infernal rift: 'a tear in reality leading to the Abyss'",
+  "the enigmatic ruins: 'where ancient powers lie dormant'",
+  "the malevolent mountain: 'home to a maleficent spirit'",
+  "the forbidden island: 'where ships vanish without a trace'",
+  "the cursed spring: 'whose waters bring ill fortune to those who drink'",
+  "the forsaken fortress: 'where the undead walk at night'",
+  "the haunted hollow: 'where lost souls seek retribution'",
+  "the blighted bog: 'where life withers and decays'",
+  "the accursed grove: 'where the trees whisper of ancient evils'",
+  "the sinister shrine: 'where dark rites are performed'",
+  "the accursed chasm: 'a gateway to the Underdark'",
+  "the forbidden plateau: 'where no mortal foot has tread for centuries'",
+  "the cursed copse: 'where the fey hold their midnight revels'",
+  "the malevolent mesa: 'rumored to be the site of an ancient curse'",
+  "the profane pit: 'where unspeakable horrors lurk'",
+  "the sinister spire: 'shrouded in dark enchantments'",
+  "the accursed atoll: 'where the sea devours all who approach'"];
+  
+  // Array of possible names for a town
+  var townNames = ["Oakwood", "Riverside", "Willowbrook", "Meadowvale", "Silvercrest", "Hearthstone", "Frostford", "Pinegrove", "Stonehaven", "Windsong",
+  "Clearwater",
+  "Greenfield",
+  "Maplewood",
+  "Brookside",
+  "Swiftwater",
+  "Goldenleaf",
+  "Amberwood",
+  "Fairview",
+  "Ashbourne",
+  "Summerfield",
+  "Cedarbrook",
+  "Whitestone",
+  "Bluevale",
+  "Sunridge",
+  "Redwood",
+  "Hillcrest",
+  "Eastgate",
+  "Westwood",
+  "Fairhaven",
+  "Moonlight",
+  "Starfall",
+  "Shadowbrook",
+  "Pineview",
+  "Springvale",
+  "Lakeside",
+  "Highmeadow",
+  "Mistyvale",
+  "Oakridge",
+  "Riverbend",
+  "Silverwood"];
+  
+  
+
+  // Array of possible names for the General Store
+  var generalStoreNames = ["Traders' Emporium", "The Market Basket", "Sundry Supplies", "The Trading Post", "The Bargain Bazaar",
+  "The Treasure Trove",
+  "The Reliable Rations",
+  "The Lucky Looter",
+  "The Friendly Faire",
+  "The Honest Merchant",
+  "The Rustic Retailer",
+  "The Selective Supplier",
+  "The Bargain Barn",
+  "The Curious Cart",
+  "The Prosperous Peddler",
+  "The Well-Stocked Stall",
+  "The Reliable Rations",
+  "The Friendly Faire",
+  "The Honest Merchant",
+  "The Rustic Retailer",
+  "The Selective Supplier",
+  "The Bargain Barn",
+  "The Curious Cart",
+  "The Prosperous Peddler",
+  "The Well-Stocked Stall",
+  "The Trusty Traders",
+  "The Opulent Outlet",
+  "The Premier Purveyor",
+  "The Sterling Storefront",
+  "The Prime Provisioner",
+  "The Exceptional Emporium"];
+
 function toggleCollapse(id) {
     var content = document.getElementById(id);
     if (content.style.display === "none") {
@@ -59,5 +185,113 @@ function mountains() {
   // Get the response div and update its content with the randomly selected weather condition
   var responseDiv = document.getElementById('response');
   responseDiv.textContent = weatherConditions[randomIndex];
+  responseDiv.style.display = "block";
+}
+
+document.getElementById('NPC-Submit').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get the selected values for race, class, alignment, and level
+  var selectedRace = document.querySelector('input[name="race-radio"]:checked').id;
+  var selectedClass = document.querySelector('input[name="class-radio"]:checked').id;
+  var selectedAlignment = document.querySelector('input[name="alignment-radio"]:checked').id;
+  var selectedLevel = document.querySelector('input[name="level-radio"]:checked').id;
+
+  // Map the radio button IDs to their respective responses
+  var raceResponses = {
+      "NPC-race-radio-random": "Random race selected",
+      "NPC-race-radio-human": "Human race selected",
+      "NPC-race-radio-elf": "Elf race selected"
+      // Add more radio button IDs and their corresponding responses as needed
+  };
+
+  // Map the radio button IDs for class to their respective responses
+  var classResponses = {
+      "npc-class-radio-random": "Random class selected",
+      "npc-class-radio-artificer": "Artificer class selected",
+      "npc-class-radio-barbarian": "Barbarian class selected"
+      // Add more radio button IDs and their corresponding responses as needed
+  };
+
+  // Map the radio button IDs for alignment to their respective responses
+  var alignmentResponses = {
+      "npc-alignment-radio-random": "Random alignment selected",
+      "npc-alignment-radio-good": "Good alignment selected",
+      "npc-alignment-radio-evil": "Evil alignment selected"
+      // Add more radio button IDs and their corresponding responses as needed
+  };
+
+  // Map the radio button IDs for level to their respective responses
+  var levelResponses = {
+      "npc-level-radio-random": "Random level selected",
+      "npc-level-radio-1-5": "Level 1-5 selected",
+      // Add more radio button IDs and their corresponding responses as needed
+  };
+
+  // Get the response div and update its content based on the selected radio buttons
+  var responseDiv = document.getElementById('response');
+  responseDiv.textContent = raceResponses[selectedRace] + "\n" +
+                           classResponses[selectedClass] + "\n" +
+                           alignmentResponses[selectedAlignment] + "\n" +
+                           levelResponses[selectedLevel];
+                           responseDiv.style.display = "block";
+}
+
+);
+
+function small() {
+  // Randomly select names for the Inn and General Store
+  var randomTownName = townNames[Math.floor(Math.random() * townNames.length)];
+  var randomInnName = innNames[Math.floor(Math.random() * innNames.length)];
+  var randomGeneralStoreName = generalStoreNames[Math.floor(Math.random() * generalStoreNames.length)];
+
+  // Randomly select a unique location
+  var randomUniqueLocation = uniqueLocations[Math.floor(Math.random() * uniqueLocations.length)];
+
+  // Return the list of small town locations
+  var responseDiv = document.getElementById('response');
+  responseDiv.innerHTML = "<ul style='list-style: none;'>" +
+  "<li>Town: " + randomTownName + "</li>" +
+                         "<li>Inn: " + randomInnName + "</li>" +
+                         "<li>General Store: " + randomGeneralStoreName + "</li>" +
+                         "<li>Unique Location: " + randomUniqueLocation + "</li>" +
+                         "</ul>";
+  responseDiv.style.display = "block";
+}
+
+function medium() {
+  // Blacksmith
+  var blacksmith = "The Iron Forger";
+
+  // Apothecary
+  var apothecary = "The Alchemical Essence";
+
+  // Array of possible names for random stores
+  var randomStores = ["The Arcane Emporium", "The Tinker's Workshop", "The Herbal Haven"];
+
+  // Randomly select names for the Inn and General Store
+  var randomInnName = innNames[Math.floor(Math.random() * innNames.length)];
+  var randomGeneralStoreName = generalStoreNames[Math.floor(Math.random() * generalStoreNames.length)];
+
+  // Randomly select a unique location
+  var randomUniqueLocation = uniqueLocations[Math.floor(Math.random() * uniqueLocations.length)];
+
+  // Randomly select a random store
+  var randomStore1 = randomStores[Math.floor(Math.random() * randomStores.length)];
+  var randomStore2 = randomStores[Math.floor(Math.random() * randomStores.length)];
+  var randomStore3 = randomStores[Math.floor(Math.random() * randomStores.length)];
+
+  // Return the list of medium city locations
+  var responseDiv = document.getElementById('response');
+  responseDiv.innerHTML = "<ul style='list-style: none;'>" +
+                         "<li>Inn: " + randomInnName + "</li>" +
+                         "<li>General Store: " + randomGeneralStoreName + "</li>" +
+                         "<li>Blacksmith: " + blacksmith + "</li>" +
+                         "<li>Apothecary: " + apothecary + "</li>" +
+                         "<li>Random Store 1: " + randomStore1 + "</li>" +
+                         "<li>Random Store 2: " + randomStore2 + "</li>" +
+                         "<li>Random Store 3: " + randomStore3 + "</li>" +
+                         "<li>Unique Location: " + randomUniqueLocation + "</li>" +
+                         "</ul>";
   responseDiv.style.display = "block";
 }
