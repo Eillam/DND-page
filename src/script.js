@@ -191,6 +191,588 @@ var innNames = ["The Sleeping Dragon", "The Merry Maiden", "The Rusty Flagon", "
   "Healer's Hideaway",
   "Sacred Salves"];
 
+  // Array of possible names for random stores
+  var mixedStoresAndNames = [
+    {
+      Type: "Butcher",
+      Name: ["Cleaver's Friend",
+      "Meat's End",
+      "Dog's Buddy",
+      "Prime Cuts Emporium",
+      "Sizzling Steaks Market",
+      "The Carving Block",
+      "Mighty Meat Masters",
+      "Tenderloin Tavern",
+      "The Butcher's Block",
+      "Savage Sausage Shop"]
+    },
+    {
+      Type: "Fletcher",
+      Name: [
+        "Hitting Your Mark",
+  "Unbroken String",
+  "Recurve",
+  "Arrow's Edge",
+  "Flight Feather Fletchings",
+  "Sharpshooter's Supplies",
+  "Quick Quiver",
+  "The Bowyer's Bench",
+  "True Aim Archery",
+  "The Longshot Loft"
+      ]
+    },
+    {
+      Type: "Tailor",
+      Name: ["Stitch & Sew",
+      "Threadbare Tailor",
+      "Silk & Satin",
+      "Finery & Fabric",
+      "Needle & Thread",
+      "Fashion Forge",
+      "Textile Treasures",
+      "Couture Corner",
+      "Embroidery Emporium",
+      "Haberdashery Haven"]
+    },
+    {
+      Type: "Tavern",
+      Name: ["The Tipsy Tankard",
+      "The Merry Mug",
+      "The Jovial Jester",
+      "The Frothy Flagon",
+      "The Rusty Goblet",
+      "The Boisterous Bard",
+      "The Wandering Wench",
+      "The Roasted Boar",
+      "The Laughing Lute",
+      "The Drunken Dragon"]
+    },
+    {
+      Type: "Armorsmith",
+      Name: ["Ironclad Forge",
+      "Steel Sentinel Armory",
+      "Guardian Plate Smithy",
+      "Battlemaster's Foundry",
+      "Defender's Den Armorsmith",
+      "Warrior's Wardrobe",
+      "Knight's Forge",
+      "Bulwark Blacksmith",
+      "Sentinel Armorsmithing",
+      "Plate and Mail Workshop"]
+    },
+    {
+      Type: "Enchanter's Emporium",
+      Name: [
+        "Arcane Aegis Enchantments",
+  "Mystic Runes Emporium",
+  "Enchanter's Elysium",
+  "Sorcerer's Sigils",
+  "Ethereal Enchantments",
+  "Enchantment Oasis",
+  "Spellbound Charms Boutique",
+  "Glimmering Glyphs Atelier",
+  "Enchanter's Haven",
+  "Whispering Wardrobe Enchantments"
+      ]
+    },
+    {
+      Type: "Alchemist's Lab",
+      Name: [
+        "Elixir Emporium",
+  "Mystic Brews Laboratory",
+  "Alchemy Alcove",
+  "Potion Palace",
+  "Essence Enigma Labs",
+  "Apothecary's Arsenal",
+  "Transmutation Tavern",
+  "Magnum Opus Mixtures",
+  "Philosopher's Phials",
+  "Miracle Elixirs Workshop"
+      ]
+    },
+    {
+      Type: "Bookstore",
+      Name: [
+        "Chapter & Verse Booksellers",
+        "Bibliophile's Haven",
+        "Enchanted Pages Bookstore",
+        "Storyteller's Emporium",
+        "Novel Nook",
+        "Literary Labyrinth",
+        "Tome Treasures",
+        "Page Turner's Paradise",
+        "Prose & Poetry Bookshop",
+        "Boundless Books"
+      ]
+    },
+    {
+      Type: "Jeweler",
+      Name: [
+        "Gemstone Gallery",
+        "Radiant Jewels Emporium",
+        "Sparkle & Shine Jewelers",
+        "Opulent Ornaments Boutique",
+        "Diamond Delight Jewelers",
+        "Elegant Gems Atelier",
+        "Precious Metals Pavilion",
+        "Jewelcraft Creations",
+        "Luxury Baubles Bazaar",
+        "Exquisite Adornments Studio"
+      ]
+    },
+    {
+      Type: "Herbalist's Hut",
+      Name: [
+        "Nature's Remedies Apothecary",
+        "Botanical Bliss Herbalists",
+        "Healing Harvest Herbs",
+        "Elixir Emporium",
+        "Green Earth Herbalists",
+        "Herbal Haven Apothecary",
+        "Wise Roots Herbalists",
+        "Essential Herb Co.",
+        "Serenity Herbals",
+        "Holistic Herb Shop"
+      ]
+    },
+    {
+      Type: "Artisan's Guild",
+      Name: [
+        "Mastercraft Guild",
+        "Artisan Alliance",
+        "Craftsmen Consortium",
+        "Guild of Creators",
+        "Artistic Endeavors Guild",
+        "Handcrafted Creations Union",
+        "Artisanal Guild Collective",
+        "Craftsman's League",
+        "Guild of Artistry"
+      ]
+    },
+    {
+      Type: "Scribe",
+      Name: [
+        "Inkwell Emporium",
+        "Quill and Parchment Repository",
+        "Scribe's Scriptorium",
+        "Scrollcrafters' Haven",
+        "The Writing Desk",
+        "Scripted Secrets Scribe Shop",
+        "Papyrus Palace",
+        "Eloquent Expressions Scribe Store",
+        "Calligraphy Corner",
+        "The Illuminated Manuscript"
+      ]
+    },
+    {
+      Type: "Curio Shop",
+      Name: [
+        "Enigmatic Elixirs",
+        "Oddities Obscura",
+        "Mystic Trinkets Treasures",
+        "Curious Curiosities",
+        "Eccentric Emporium",
+        "Antique Arcanum",
+        "Enchanted Artifacts Attic",
+        "Bizarre Baubles Bazaar",
+        "Wonderous Wares Warehouse",
+        "Peculiar Paraphernalia Place"
+      ]
+    },
+    {
+      Type: "Perfumery",
+      Name: [
+        "Scented Splendors",
+        "Aroma Alchemy",
+        "Fragrance Boutique",
+        "Perfume Panache",
+        "Essence Emporium",
+        "Scent Sensations",
+        "The Perfume Parlour",
+        "Aromatic Oasis",
+        "Divine Dioramas",
+        "Bouquet Bazaar"
+      ]
+    },
+    {
+      Type: "Mapmaker's Cartography",
+      Name: [
+        "ChartCrafters",
+        "Cartographic Cartel",
+        "Atlas Artistry",
+        "Navigational Nirvana",
+        "Expedition Express",
+        "Topography Treasures",
+        "Geographic Galleria",
+        "Cartography Creations",
+        "Wayfinder's Workshop",
+        "Landmark Legends"
+      ]
+    },
+    {
+      Type: "Tinker Shop",
+      Name: [
+        "Gadget Grove",
+        "Ingenious Inventions",
+        "Mechanical Marvels",
+        "Tinker's Treasures",
+        "Whimsical Widgets",
+        "Contraption Corner",
+        "Gear Galleria",
+        "Wonderous Workshop",
+        "Tinkerer's Trove",
+        "The Gadgeteer's Guild"
+      ]
+    },
+    {
+      Type: "Music Store",
+      Name: [
+        "Melody Manor",
+        "Harmony Haven",
+        "Sonic Sanctuary",
+        "Rhythmic Rhapsody",
+        "Tune Trove",
+        "Muse Music",
+        "Symphony Square",
+        "Aria Attic",
+        "Note Nirvana",
+        "Chord Corner"
+      ]
+    },
+    {
+      Type: "Candlemaker's",
+      Name: [
+        "Luminous Lights",
+        "Wax Wonders",
+        "Candle Crest",
+        "Glowing Grotto",
+        "Radiant Revelry",
+        "Flame Finesse",
+        "Enchanted Ember",
+        "Twilight Treasures",
+        "Scented Sparks",
+        "Eternal Flames"
+      ]
+    },
+    {
+      Type: "Sculptor's Studio",
+      Name: [
+        "Marble Marvels",
+        "Form and Figure",
+        "Artisan's Atelier",
+        "Sculptor's Sanctuary",
+        "Chisel & Charm",
+        "Elegant Effigies",
+        "Stone Symphony",
+        "Creative Carvings",
+        "Statue Studio",
+        "Aesthetic Assemblage"
+      ]
+    },
+    {
+      Type: "Locksmith",
+      Name: [
+        "Secure Solutions",
+        "Key Masters",
+        "Locksmith Legends",
+        "Guardian Locks",
+        "Safe & Sound",
+        "Fortress Locks",
+        "Keyed Up",
+        "Ironclad Security",
+        "Lock & Key Experts",
+        "Bolt Breakers"
+      ]
+    },
+    {
+      Type: "Brewer",
+      Name: [
+        "Hop Haven Brewery",
+        "Crafted Elixirs",
+        "Brewmaster's Blend",
+        "Barrel & Brews",
+        "Malt Magic Brewery",
+        "Ales & Lagers Co.",
+        "Fermenter's Fantasy",
+        "Brewers' Bounty",
+        "The Brewsmiths",
+        "Hops & Barley Brewing"
+      ]
+    },
+    {
+      Type: "Vintner",
+      Name: [
+        "Grapevine Glory",
+        "Vintage Vineyard",
+        "Cellar Select",
+        "Winecrafters",
+        "Vine & Vessel",
+        "Vintner's Vision",
+        "Harvest Haven",
+        "Noble Nectar",
+        "Estate Elixirs",
+        "Oak & Grapes"
+      ]
+    },
+    {
+      Type: "Calligrapher",
+      Name: [
+        "Ink & Elegance",
+        "Scripted Splendor",
+        "Artful Penmanship",
+        "QuillCraft Studio",
+        "Graceful Letters Co.",
+        "Elegant Scripts Atelier",
+        "Divine Inkwork",
+        "Golden Quill Calligraphy",
+        "Majestic Scrolls Studio",
+        "Masterful Script Artistry"
+      ]
+    },
+    {
+      Type: "Carpenter",
+      Name: [
+        "Woodcraft Wizards",
+        "Timber Artisans",
+        "Crafted Creations Co.",
+        "The Woodwork Masters",
+        "Custom Carvings Collective",
+        "Precision Planes Studio",
+        "Artisanal Carpentry Works",
+        "Mighty Oak Carpentry",
+        "Rustic Revival Carpentry",
+        "Elegant Edges Carpentry"
+      ]
+    },
+    {
+      Type: "Cobblers",
+      Name: [
+        "Sole Savers Workshop",
+        "Heel Hero Cobblers",
+        "The Leathercrafters",
+        "Cobbler's Corner",
+        "Footwear Fixers Co.",
+        "Shoe Restorers Collective",
+        "Sole Revive Artisans",
+        "Cobbler's Care Studio",
+        "The Shoe Smiths",
+        "Leather Works Lab"
+      ]
+    },
+    {
+      Type: "Bakers",
+      Name: [
+        "Sweet Sensations Bakery",
+        "Golden Crust Bakeshop",
+        "Rise & Bake Co.",
+        "Flourish & Frost Bakery",
+        "Dough Delights Cafe",
+        "Heavenly Oven Bakery",
+        "Bake Bliss Boutique",
+        "Artisanal Bites Bakery",
+        "Whisk & Roll Bakehouse",
+        "Divine Desserts & Bakes"
+      ]
+    },
+    {
+      Type: "Glassblowers",
+      Name: [
+        "Crystal Crafters Studio",
+        "Glowing Glassworks",
+        "Artisanal Glass Gallery",
+        "Ethereal Glass Creations",
+        "Radiant Flames Studio",
+        "Molten Magic Glassworks",
+        "Celestial Glass Atelier",
+        "Inferno Art Glass Studio",
+        "Sculpted Sands Glassworks",
+        "Luminous Legacy Glass"
+      ]
+    },
+    {
+      Type: "Leatherworkers",
+      Name: [
+        "Crafted Hide Co.",
+        "Embossed Elegance Leatherworks",
+        "Artisanal Leather Studio",
+        "Sculpted Hide Creations",
+        "Tanned & Tooled Atelier",
+        "Stitched Legacy Leatherworks",
+        "Hide & Chic Boutique",
+        "Luxury Leather Loft",
+        "Custom Cut Leather Co.",
+        "Refined Rawhide Gallery"
+      ]
+    },
+    {
+      Type: "Mason",
+      Name: [
+        "Solid Stone Creations",
+        "Artisanal Masonry Gallery",
+        "Heritage Stone Works",
+        "Crafted Rock Boutique",
+        "Pillars & Pedestals Studio",
+        "Granite Guild Emporium",
+        "Marble Masterworks",
+        "Sculpted Stone Atelier",
+        "Limestone Legacy Co.",
+        "Stately Slate Artisans"
+      ]
+    },
+    {
+      Type: "Painters",
+      Name: [
+        "Vivid Hue Depot",
+        "Brush and Palette Emporium",
+        "Chroma Craft Studio",
+        "Artistic Strokes Gallery",
+        "Pigment Oasis",
+        "Canvas and Color Co.",
+        "Mural Magic Atelier",
+        "Easel Elegance Boutique",
+        "Palette Perfection Emporium",
+        "Aquarelle Artistry"
+      ]
+    },
+    {
+      Type: "Sign-maker",
+      Name: [
+        "Signature Signs Studio",
+        "Custom Carvings & Signs",
+        "Creative Signworks",
+        "Artisanal Lettering Co.",
+        "Distinctive Displays Depot",
+        "Visual Visions Workshop",
+        "Imprint Innovations",
+        "Iconic Impressions Atelier",
+        "Bespoke Signs Boutique",
+        "Prime Prints & Signs"
+      ]
+    },
+    {
+      Type: "Potter",
+      Name: [
+        "Clay Creations Corner",
+        "Earthenware Emporium",
+        "Pottery Paradise",
+        "Mold & Wheel Workshop",
+        "Artisanal Vessels Vault",
+        "Ceramic Charms Co.",
+        "Kiln Craft Studio",
+        "Form & Fire Boutique",
+        "Artful Artifacts Atelier",
+        "Earth Essence Gallery"
+      ]
+    },
+    {
+      Type: "Shipwright",
+      Name: [
+        "Maritime Masterpieces",
+        "Nautical Craftsmanship Co.",
+        "Ship Shape Shipyards",
+        "Seafaring Solutions Studio",
+        "Voyage Vessels Workshop",
+        "Oceanic Outfitters",
+        "Naval Niche Nook",
+        "Sailors' Sanctuary",
+        "Anchors & Aft Atelier",
+        "Masts & More Marketplace"
+      ]
+    },
+    {
+      Type: "Caster",
+      Name: [
+        "Iron Forge Foundry",
+        "Bronze Craftworks Studio",
+        "Steel Fusion Creations",
+        "Copper Alloy Atelier",
+        "Molten Metal Marvels",
+        "Aluminum Artistry Depot",
+        "Silver Castings Corner",
+        "Brass Blazing Workshop",
+        "Titanium Tempering Hub",
+        "Metallic Molds Masterclass"
+      ]
+    },
+    {
+      Type: "Wheelwright",
+      Name: [
+        "Cart Craftsmanship Co.",
+        "Wheel Wonders Workshop",
+        "Axle Artistry Atelier",
+        "Rolling Renovations Studio",
+        "Hubcap Haven",
+        "Spoke Splendor Store",
+        "Carriage Crafters Collective",
+        "Wagon Wheel Workshop",
+        "Rim Revival Retail",
+        "Chariot Champions Center"
+      ]
+    },
+    {
+      Type: "Weaver",
+      Name: [
+        "Textile Tales Studio",
+        "ThreadCraft Creations Co.",
+        "Fabric Fantasia Emporium",
+        "Looming Wonders Workshop",
+        "Silken Strands Sanctuary",
+        "WeaveWhiz Atelier",
+        "Artful Fibers Boutique",
+        "Crafted Canvas Collective",
+        "Spindle & Shuttle Studio",
+        "Woven Dreams Marketplace"
+      ]
+    },
+    {
+      Type: "Cooper",
+      Name: [
+        "BarrelCraft Creations",
+        "Cask Masters Co.",
+        "Wooden Barrel Emporium",
+        "Cooper's Craftsmanship Corner",
+        "Barrel Artisans Collective",
+        "Oak & Hoop Workshop",
+        "CaskCraft Creations",
+        "Wooden Vessel Ventures",
+        "Cooper's Cask Haven",
+        "Barrel Boutique"
+      ]
+    },
+    {
+      Type: "Woodcarver",
+      Name: [
+        "Timber Artistry Studio",
+        "Whittling Wonders Workshop",
+        "Carved Creations Co.",
+        "ForestCraft Carvings",
+        "Wooden Whimsy Atelier",
+        "Nature's Niche Carvings",
+        "Sculpted Timber Treasures",
+        "Rustic Roots Carving Corner",
+        "Whittle & Craft Woodworks",
+        "Bark to Beauty Carvers"
+      ]
+    },
+    {
+      Type: "Printing Press",
+      Name: [
+        "Inkwell Impressions",
+        "Press Perfection Studio",
+        "PrintCraft Creations",
+        "Typeface Treasures Hub",
+        "Paper Symphony Press",
+        "Imprint Innovations Co.",
+        "Precision Printing Parlor",
+        "Artisanal Prints Atelier",
+        "Quill & Press Gallery",
+        "Epic Impressions Workshop"
+      ]
+    },
+    // Add more types and names as needed
+  ];
+
+
 function toggleCollapse(id) {
     var content = document.getElementById(id);
     if (content.style.display === "none") {
@@ -325,9 +907,6 @@ function small() {
 }
 
 function medium() {
-  // Array of possible names for random stores
-  var randomStores = ["The Arcane Emporium", "The Tinker's Workshop", "The Herbal Haven"];
-
   // Randomly select names for the Inn and General Store
   var randomInns = [];
   while (randomInns.length < 3) {
@@ -345,15 +924,22 @@ function medium() {
   } 
   }
   
+  var randomStoreAndName = [];
+while (randomStoreAndName.length < 3) {
+  var randomTypeIndex = Math.floor(Math.random() * mixedStoresAndNames.length);
+  var randomType = mixedStoresAndNames[randomTypeIndex].Type;
+  var randomNameIndex = Math.floor(Math.random() * mixedStoresAndNames[randomTypeIndex].Name.length);
+  var randomName = mixedStoresAndNames[randomTypeIndex].Name[randomNameIndex];
+
+  // Check if the combination of randomType and randomName is not already in the array
+  if (!randomStoreAndName.some(item => item.Type === randomType && item.Name === randomName)) {
+    randomStoreAndName.push({ Type: randomType, Name: randomName });
+  }
+}
 
   // Randomly select a unique location
   var randomUniqueLocation = uniqueLocations[Math.floor(Math.random() * uniqueLocations.length)];
-
-  // Randomly select a random store
-  var randomStore1 = randomStores[Math.floor(Math.random() * randomStores.length)];
-  var randomStore2 = randomStores[Math.floor(Math.random() * randomStores.length)];
-  var randomStore3 = randomStores[Math.floor(Math.random() * randomStores.length)];
-
+  
   var randomBlacksmith = blacksmith[Math.floor(Math.random() * blacksmith.length)];
   var randomApothecary = apothecary[Math.floor(Math.random() * apothecary.length)];
 
@@ -368,9 +954,93 @@ function medium() {
                          "<li>General Store: " + generalStoreNames[randomGeneralStoreName[2]] + "</li>" +
                          "<li>Blacksmith: " + randomBlacksmith + "</li>" +
                          "<li>Apothecary: " + randomApothecary + "</li>" +
-                         "<li>Random Store 1: " + randomStore1 + "</li>" +
-                         "<li>Random Store 2: " + randomStore2 + "</li>" +
-                         "<li>Random Store 3: " + randomStore3 + "</li>" +
+                         "<li>" + randomStoreAndName[0].Type + ": " + randomStoreAndName[0].Name + "</li>" +
+                         "<li>" + randomStoreAndName[1].Type + ": " + randomStoreAndName[1].Name + "</li>" +
+                         "<li>" + randomStoreAndName[2].Type + ": " + randomStoreAndName[2].Name +"</li>" +
+                         "<li>Unique Location: " + randomUniqueLocation + "</li>" +
+                         "</ul>";
+  responseDiv.style.display = "block";
+}
+
+function large() {
+  // Randomly select names for the Inn and General Store
+  var randomInns = [];
+  while (randomInns.length < 5) {
+  var randomIndex = Math.floor(Math.random() * innNames.length);
+  if (!randomInns.includes(randomIndex)) {
+    randomInns.push(randomIndex);
+  } 
+  }
+  
+  var randomGeneralStoreName = [];
+  while (randomGeneralStoreName.length < 3) {
+  var randomIndexStore = Math.floor(Math.random() * generalStoreNames.length);
+  if (!randomGeneralStoreName.includes(randomIndexStore)) {
+    randomGeneralStoreName.push(randomIndexStore);
+  } 
+  }
+  
+  var randomStoreAndName = [];
+while (randomStoreAndName.length < 8) {
+  var randomTypeIndex = Math.floor(Math.random() * mixedStoresAndNames.length);
+  var randomType = mixedStoresAndNames[randomTypeIndex].Type;
+  var randomNameIndex = Math.floor(Math.random() * mixedStoresAndNames[randomTypeIndex].Name.length);
+  var randomName = mixedStoresAndNames[randomTypeIndex].Name[randomNameIndex];
+
+  // Check if the combination of randomType and randomName is not already in the array
+  if (!randomStoreAndName.some(item => item.Type === randomType && item.Name === randomName)) {
+    randomStoreAndName.push({ Type: randomType, Name: randomName });
+  }
+}
+
+  // Randomly select a unique location
+  var randomUniqueLocation = uniqueLocations[Math.floor(Math.random() * uniqueLocations.length)];
+  
+  
+
+  var randomBlacksmith = [];
+  while (randomBlacksmith.length < 3) {
+  var randomIndexSmith = Math.floor(Math.random() * blacksmith.length);
+  if (!randomBlacksmith.includes(randomIndexSmith)) {
+    randomBlacksmith.push(randomIndexSmith);
+  } 
+  }
+
+  
+
+  var randomApothecary = [];
+  while (randomApothecary.length < 3) {
+  var randomIndexApoth = Math.floor(Math.random() * apothecary.length);
+  if (!randomApothecary.includes(randomIndexApoth)) {
+    randomApothecary.push(randomIndexApoth);
+  } 
+  }
+
+  // Return the list of medium city locations
+  var responseDiv = document.getElementById('response');
+  responseDiv.innerHTML = "<ul style='list-style: none;'>" +
+  "<li>Inn: " + innNames[randomInns[0]] + "</li>" +
+  "<li>Inn: " + innNames[randomInns[1]] + "</li>" +
+  "<li>Inn: " + innNames[randomInns[2]] + "</li>" +
+  "<li>Inn: " + innNames[randomInns[3]] + "</li>" +
+  "<li>Inn: " + innNames[randomInns[4]] + "</li>" +
+                         "<li>General Store: " + generalStoreNames[randomGeneralStoreName[0]] + "</li>" +
+                         "<li>General Store: " + generalStoreNames[randomGeneralStoreName[1]] + "</li>" +
+                         "<li>General Store: " + generalStoreNames[randomGeneralStoreName[2]] + "</li>" +
+                         "<li>Blacksmith: " + blacksmith[randomBlacksmith[0]] + "</li>" +
+                         "<li>Blacksmith: " + blacksmith[randomBlacksmith[1]] + "</li>" +
+                         "<li>Blacksmith: " + blacksmith[randomBlacksmith[2]] + "</li>" +
+                         "<li>Apothecary: " + apothecary[randomApothecary[0]] + "</li>" +
+                         "<li>Apothecary: " + apothecary[randomApothecary[1]] + "</li>" +
+                         "<li>Apothecary: " + apothecary[randomApothecary[2]] + "</li>" +
+                         "<li>" + randomStoreAndName[0].Type + ": " + randomStoreAndName[0].Name + "</li>" +
+                         "<li>" + randomStoreAndName[1].Type + ": " + randomStoreAndName[1].Name + "</li>" +
+                         "<li>" + randomStoreAndName[2].Type + ": " + randomStoreAndName[2].Name +"</li>" +
+                         "<li>" + randomStoreAndName[3].Type + ": " + randomStoreAndName[3].Name +"</li>" +
+                         "<li>" + randomStoreAndName[4].Type + ": " + randomStoreAndName[4].Name +"</li>" +
+                         "<li>" + randomStoreAndName[5].Type + ": " + randomStoreAndName[5].Name +"</li>" +
+                         "<li>" + randomStoreAndName[6].Type + ": " + randomStoreAndName[6].Name +"</li>" +
+                         "<li>" + randomStoreAndName[7].Type + ": " + randomStoreAndName[7].Name +"</li>" +
                          "<li>Unique Location: " + randomUniqueLocation + "</li>" +
                          "</ul>";
   responseDiv.style.display = "block";
