@@ -33,8 +33,9 @@ h5 {
 }
 
 .btn-lg {
-    width: 250px;
-    height: 120px;
+padding: 30px 30px;
+font-size: 20px;
+border-radius: 10px;
 }
 
 .offcanvas-title {
@@ -44,3 +45,4 @@ h5 {
 #NPC-Submit {
     margin: 10px auto;
 }
+
