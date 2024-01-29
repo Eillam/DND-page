@@ -793,7 +793,8 @@ function toggleCollapse(id) {
 
     // Get the response div and update its content with the randomly selected weather condition
     var responseDiv = document.getElementById('response');
-    responseDiv.textContent = weatherConditions[randomIndex];
+    responseDiv.innerHTML = weatherConditions[randomIndex] + "<br>" +
+    "<button type='button' class='btn-close' aria-label='Close' onclick='hide()'></button>";
     responseDiv.style.display = "block";
 }
 
@@ -812,7 +813,8 @@ function plains() {
 
   // Get the response div and update its content with the randomly selected weather condition
   var responseDiv = document.getElementById('response');
-  responseDiv.textContent = weatherConditions[randomIndex];
+  responseDiv.innerHTML = weatherConditions[randomIndex] + "<br>" +
+  "<button type='button' class='btn-close' aria-label='Close' onclick='hide()'></button>";
   responseDiv.style.display = "block";
 }
 
@@ -831,7 +833,8 @@ function mountains() {
 
   // Get the response div and update its content with the randomly selected weather condition
   var responseDiv = document.getElementById('response');
-responseDiv.textContent = weatherConditions[randomIndex];
+responseDiv.innerHTML = weatherConditions[randomIndex] + "<br>" +
+"<button type='button' class='btn-close' aria-label='Close' onclick='hide()'></button>";
 responseDiv.style.display = "block";
 }
 
@@ -902,7 +905,8 @@ function small() {
                          "<li>Inn: " + randomInnName + "</li>" +
                          "<li>General Store: " + randomGeneralStoreName + "</li>" +
                          "<li>Unique Location: " + randomUniqueLocation + "</li>" +
-                         "</ul>";
+                         "</ul>" +
+                         "<button type='button' class='btn-close' aria-label='Close' onclick='hide()'></button>";
   responseDiv.style.display = "block";
 }
 
@@ -959,7 +963,8 @@ while (randomStoreAndName.length < 3) {
                          "<li>" + randomStoreAndName[1].Type + ": " + randomStoreAndName[1].Name + "</li>" +
                          "<li>" + randomStoreAndName[2].Type + ": " + randomStoreAndName[2].Name +"</li>" +
                          "<li>Unique Location: " + randomUniqueLocation + "</li>" +
-                         "</ul>";
+                         "</ul>" +
+                         "<button type='button' class='btn-close' aria-label='Close' onclick='hide()'></button>";
   responseDiv.style.display = "block";
 }
 
@@ -1041,7 +1046,8 @@ function large() {
                          "<li>" + randomStoreAndName[6].Type + ": " + randomStoreAndName[6].Name +"</li>" +
                          "<li>" + randomStoreAndName[7].Type + ": " + randomStoreAndName[7].Name +"</li>" +
                          "<li>Unique Location: " + randomUniqueLocation + "</li>" +
-                         "</ul>";
+                         "</ul>" + 
+                         "<button type='button' class='btn-close' aria-label='Close' onclick='hide()'></button>";
   responseDiv.style.display = "block";
 }
    
@@ -1056,4 +1062,9 @@ function copyText() {
   /* Copy selected text into clipboard */
   navigator.clipboard.writeText(Text.value);
 
+}
+
+function hide() {
+  var responseDiv = document.getElementById("response");
+  responseDiv.style.display = "none";
 }
