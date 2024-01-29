@@ -831,8 +831,8 @@ function mountains() {
 
   // Get the response div and update its content with the randomly selected weather condition
   var responseDiv = document.getElementById('response');
-  responseDiv.textContent = weatherConditions[randomIndex];
-  responseDiv.style.display = "block";
+responseDiv.textContent = weatherConditions[randomIndex];
+responseDiv.style.display = "block";
 }
 
 document.getElementById('NPC-Submit').addEventListener('click', function(event) {
@@ -1045,4 +1045,15 @@ function large() {
   responseDiv.style.display = "block";
 }
    
-   
+function copyText() {
+     
+  /* Select text area by id*/
+  var Text = document.getElementById("response");
+
+  /* Select the text inside text area. */
+  Text.select();
+
+  /* Copy selected text into clipboard */
+  navigator.clipboard.writeText(Text.value);
+
+}
