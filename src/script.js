@@ -802,8 +802,8 @@ function toggleCollapse(id) {
                            "<li>Unique Location: " + randomUniqueLocation + "</li>" +
                            "</ul>" +
                            "<button type='button' class='btn-close' aria-label='Close' onclick='hide()'></button>";
-    const currentDiv = document.getElementById('Response');
-    document.body.insertBefore(responseDiv, currentDiv);
+    
+    document.body.appendChild(responseDiv);
   }
 
   function weather2() {
