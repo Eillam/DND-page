@@ -782,6 +782,60 @@ function toggleCollapse(id) {
     }
   }
 
+  function small2() {
+    // Randomly select names for the Inn and General Store
+    var randomTownName = townNames[Math.floor(Math.random() * townNames.length)];
+    var randomInnName = innNames[Math.floor(Math.random() * innNames.length)];
+    var randomGeneralStoreName = generalStoreNames[Math.floor(Math.random() * generalStoreNames.length)];
+  
+    // Randomly select a unique location
+    var randomUniqueLocation = uniqueLocations[Math.floor(Math.random() * uniqueLocations.length)];
+  
+    // Return the list of small town locations
+    var responseDiv = document.createElement('div');
+    responseDiv.id = 'response';
+    responseDiv.className = 'alert';
+    responseDiv.innerHTML = "<ul style='list-style: none;'>" +
+    "<li>Town: " + randomTownName + "</li>" +
+                           "<li>Inn: " + randomInnName + "</li>" +
+                           "<li>General Store: " + randomGeneralStoreName + "</li>" +
+                           "<li>Unique Location: " + randomUniqueLocation + "</li>" +
+                           "</ul>" +
+                           "<button type='button' class='btn-close' aria-label='Close' onclick='hide()'></button>";
+    const currentDiv = document.getElementById('Response');
+    document.body.insertBefore(responseDiv, currentDiv);
+  }
+
+  function weather2() {
+    // List of possible weather conditions
+    var weatherConditions = [
+      "Cloudy & Humid: The sun beams brightly behind the clouds, that are sealing in the warm wet air.",
+      "Sunny & Breezy: The warm rays dance through the swaying leaves, creating a gentle, refreshing breeze.",
+      "Misty & Serene: The mist envelops the landscape in a tranquil, ethereal embrace, softening all sounds.",
+      "Frosty & Crisp: The air crackles with the chill of early morning frost, painting the world in a pristine, icy sheen.",
+      "Rainy & Refreshing: The gentle raindrops cleanse the earth, infusing the air with a rejuvenating, earthy scent.",
+      "Snowy & Peaceful: Each snowflake falls silently, blanketing the world in a hushed, serene stillness.",
+      "Foggy & Mysterious: The fog weaves a veil of mystery, obscuring the familiar and shrouding the world in intrigue.",
+      "Stormy & Electrifying: The sky rumbles with power as lightning streaks across the horizon, electrifying the atmosphere",
+    ];
+
+    // Generate a random index to select a weather condition from the list
+    var randomIndex = Math.floor(Math.random() * weatherConditions.length);
+
+    // Get the response div and update its content with the randomly selected weather condition
+    var responseDiv = document.createElement('div');
+    responseDiv.id = 'response';
+    responseDiv.className = 'alert';
+    responseDiv.innerHTML = weatherConditions[randomIndex] + "<br>" +
+  "<button type='button' class='btn-close' aria-label='Close' onclick='hide()'></button>";
+
+  const currentDiv = document.getElementById('Response')
+  document.body.insertBefore(responseDiv, currentDiv)
+  }
+
+
+
+  // old weather functions, that maybe used again later
   function coast() {
     // List of possible weather conditions
     var weatherConditions = [

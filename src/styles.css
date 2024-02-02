@@ -4,7 +4,7 @@ body {
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(135.8deg, rgb(26, 26, 29) 27.1%, rgb(111, 34, 50) 77.5%);
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
     padding-top: 0px;
     margin: 0px;
 
@@ -21,10 +21,12 @@ header {
 
 #response {
     text-align: center; 
-    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(179, 153, 153) 0%, red 90%);
     font-weight: bold;
     font-size: 1.5rem;
-    display: none;
+    width: 80%;
+    float: right;
+    margin: 20px 5%;
 }
 
 h5 {
@@ -32,10 +34,11 @@ h5 {
     text-align: center;
 }
 
-.btn-lg {
-padding: 30px 30px;
+.btn {
+padding: 20px 80px;
 font-size: 20px;
 border-radius: 10px;
+margin: 20px
 }
 
 .offcanvas-title {
@@ -46,4 +49,11 @@ border-radius: 10px;
     margin: 10px auto;
 }
 
-
+#vertical-btn {
+    position: fixed;
+    top: 12%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
