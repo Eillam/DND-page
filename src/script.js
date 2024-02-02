@@ -772,6 +772,40 @@ var innNames = ["The Sleeping Dragon", "The Merry Maiden", "The Rusty Flagon", "
     // Add more types and names as needed
   ];
 
+     // List of possible weather conditions
+     var weatherConditions = [
+      "Cloudy & Humid: The sun beams brightly behind the clouds, that are sealing in the warm wet air.",
+      "Sunny & Breezy: The warm rays dance through the swaying leaves, creating a gentle, refreshing breeze.",
+      "Misty & Serene: The mist envelops the landscape in a tranquil, ethereal embrace, softening all sounds.",
+      "Frosty & Crisp: The air crackles with the chill of early morning frost, painting the world in a pristine, icy sheen.",
+      "Rainy & Refreshing: The gentle raindrops cleanse the earth, infusing the air with a rejuvenating, earthy scent.",
+      "Snowy & Peaceful: Each snowflake falls silently, blanketing the world in a hushed, serene stillness.",
+      "Foggy & Mysterious: The fog weaves a veil of mystery, obscuring the familiar and shrouding the world in intrigue.",
+      "Stormy & Electrifying: The sky rumbles with power as lightning streaks across the horizon, electrifying the atmosphere",
+      "Hazy & Languid: The hazy air envelops everything in a dreamy, relaxed aura, slowing the passage of time",
+      "Windy & Invigorating: The gusts of wind breathe energy into the world, stirring up vitality and movement.",
+      "Clear & Tranquil: The crystal-clear skies bring a sense of calm, as if the world has paused for a moment of serenity.",
+      "Sweltering & Sizzling: The heat shimmers in waves, creating a sizzling, sauna-like atmosphere under the blazing sun.",
+      "Chilly & Crisp: The air carries a sharp, invigorating chill, awakening the senses with its brisk touch.",
+      "Gloomy & Melancholic: The overcast sky casts a somber hue over the world, evoking a sense of quiet introspection.",
+      "Breezy & Balmy: The gentle breeze carries a warm, balmy embrace, soothing all it touches with a gentle caress.",
+      "Overcast & Still: The heavy clouds hang motionless, casting a blanket of quiet stillness over the landscape.",
+      "Drizzly & Damp: The fine mist settles on everything, coating the world in a soft, damp veil of moisture.",
+      "Boiling & Sultry: The oppressive heat weighs heavily, enveloping the surroundings in a sultry, stifling embrace.",
+      "Blustery & Wild: The untamed wind whips through the air, stirring up a frenzy of movement and energy.",
+      "Muggy & Stifling: The air hangs heavy and thick, suffocating the world in a muggy, stifling embrace.",
+      "Smoggy & Oppressive: The smog obscures the skyline, casting a pall of oppressive heaviness over the city.",
+      "Clammy & Close: The air feels clammy and dense, wrapping the surroundings in a close, humid embrace.",
+      "Tempestuous & Untamed: The tempest rages, unleashing its untamed fury upon the world with unbridled force.",
+      "Brisk & Invigorating: The brisk air carries a sense of invigoration, infusing the surroundings with a lively energy.",
+      "Mellow & Mild: The gentle breeze and warm sun create a mellow, mild atmosphere perfect for relaxation.",
+      "Soggy & Sodden: The relentless rain saturates the earth, leaving everything sodden and drenched.",
+      "Calm & Serene: The tranquil atmosphere exudes a sense of peace and calm, as if time itself has paused.",
+      "Scorching & Blazing: The searing heat blazes down, enveloping the world in a relentless, scorching embrace.",
+      "Muggy & Heavy: The air hangs heavy and moist, clinging to the skin with a muggy, oppressive weight.",
+      "Damp & Dreary: The dampness seeps into everything, casting a dreary, despondent pall over the landscape.",
+      "Clear & Starry: The cloudless night sky sparkles with a myriad of stars, casting a clear, celestial glow over the world.",
+    ];
 
 function toggleCollapse(id) {
     var content = document.getElementById(id);
@@ -807,18 +841,6 @@ function toggleCollapse(id) {
   }
 
   function weather2() {
-    // List of possible weather conditions
-    var weatherConditions = [
-      "Cloudy & Humid: The sun beams brightly behind the clouds, that are sealing in the warm wet air.",
-      "Sunny & Breezy: The warm rays dance through the swaying leaves, creating a gentle, refreshing breeze.",
-      "Misty & Serene: The mist envelops the landscape in a tranquil, ethereal embrace, softening all sounds.",
-      "Frosty & Crisp: The air crackles with the chill of early morning frost, painting the world in a pristine, icy sheen.",
-      "Rainy & Refreshing: The gentle raindrops cleanse the earth, infusing the air with a rejuvenating, earthy scent.",
-      "Snowy & Peaceful: Each snowflake falls silently, blanketing the world in a hushed, serene stillness.",
-      "Foggy & Mysterious: The fog weaves a veil of mystery, obscuring the familiar and shrouding the world in intrigue.",
-      "Stormy & Electrifying: The sky rumbles with power as lightning streaks across the horizon, electrifying the atmosphere",
-    ];
-
     // Generate a random index to select a weather condition from the list
     var randomIndex = Math.floor(Math.random() * weatherConditions.length);
 
