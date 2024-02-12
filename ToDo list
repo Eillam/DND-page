@@ -1,7 +1,8 @@
 //
 To Do list:
 - simplify the NPC creation: this should be a quick select button able to npc details on demand. IE. Player asks "I look around the Inn, who do I see?". The GM should be able to click on NPC and generate a quick answer. Example: "A (scarred and bald), (Dwarf). A (notebook) in (his) (hands). A (happy) look upon his face." The () notations are the parts of the response that will be VAR with different responses.
-- reword the weather conditions to be a little less descriptive.
-- rework the 'response' div to maybe be a Float.
+- 12 Feb Edit. Weather adjusted. More work needs done here. (maybe)
+- 12 Feb edit. Response Div working well, thanks to ChildNodes.
 - look into local storage.
-- look into the 'response div' also having buttons to continue the generation. IE: you get a response for town. The Inn is called: the Dancing Monkey. You can click on the Dancing monkey 'link' name, and it will generate the dancing monkey inn and it's setting, ambience, size, and denizens. //
+- look into the 'response div' also having buttons to continue the generation. IE: you get a response for town. The Inn is called: the Dancing Monkey. You can click on the Dancing monkey 'link' name, and it will generate the dancing monkey inn and it's setting, ambience, size, and denizens. 
+//
