@@ -28,10 +28,10 @@ var innNames = ["The Sleeping Dragon", "The Merry Maiden", "The Rusty Flagon", "
   "The Tranquil Turtle",
   "The Vibrant Vixen",
   "The Zephyr Zebra",
-  "The Whimsical Wyvern"];
+"The Whimsical Wyvern"];
 
-  // Array of possible unique locations
-  var uniqueLocations = ["the old mill: 'it's is said to be home to a coven of hags'",
+// Array of possible unique locations
+var uniqueLocations = ["the old mill: 'it's is said to be home to a coven of hags'",
   "the abandoned church: 'rumored to be haunted by vengeful spirits'",
   "the mysterious grove: 'said to be a portal to another realm'",
   "the hidden cave: 'known as the lair of a fearsome dragon'",
@@ -60,10 +60,10 @@ var innNames = ["The Sleeping Dragon", "The Merry Maiden", "The Rusty Flagon", "
   "the malevolent mesa: 'rumored to be the site of an ancient curse'",
   "the profane pit: 'where unspeakable horrors lurk'",
   "the sinister spire: 'shrouded in dark enchantments'",
-  "the accursed atoll: 'where the sea devours all who approach'"];
+"the accursed atoll: 'where the sea devours all who approach'"];
   
-  // Array of possible names for a town
-  var townNames = ["Oakwood", "Riverside", "Willowbrook", "Meadowvale", "Silvercrest", "Hearthstone", "Frostford", "Pinegrove", "Stonehaven", "Windsong",
+// Array of possible names for a town
+var townNames = ["Oakwood", "Riverside", "Willowbrook", "Meadowvale", "Silvercrest", "Hearthstone", "Frostford", "Pinegrove", "Stonehaven", "Windsong",
   "Clearwater",
   "Greenfield",
   "Maplewood",
@@ -93,12 +93,10 @@ var innNames = ["The Sleeping Dragon", "The Merry Maiden", "The Rusty Flagon", "
   "Mistyvale",
   "Oakridge",
   "Riverbend",
-  "Silverwood"];
-  
-  
+"Silverwood"];
 
-  // Array of possible names for the General Store
-  var generalStoreNames = ["Traders' Emporium", "The Market Basket", "Sundry Supplies", "The Trading Post", "The Bargain Bazaar",
+// Array of possible names for the General Store
+var generalStoreNames = ["Traders' Emporium", "The Market Basket", "Sundry Supplies", "The Trading Post", "The Bargain Bazaar",
   "The Treasure Trove",
   "The Reliable Rations",
   "The Lucky Looter",
@@ -124,10 +122,10 @@ var innNames = ["The Sleeping Dragon", "The Merry Maiden", "The Rusty Flagon", "
   "The Premier Purveyor",
   "The Sterling Storefront",
   "The Prime Provisioner",
-  "The Exceptional Emporium"];
+"The Exceptional Emporium"];
 
-  // Blacksmith
-  var blacksmith = ["The Iron Forger",
+// Blacksmith
+var blacksmith = ["The Iron Forger",
   "Smithy's Forge",
   "Forged Creations",
   "Anvil & Hammer",
@@ -156,10 +154,11 @@ var innNames = ["The Sleeping Dragon", "The Merry Maiden", "The Rusty Flagon", "
   "Fierce Fire Forge",
   "Iron Impact",
   "Eternal Ember Forge",
-  "Vulcan's Vault"];
+  "Vulcan's Vault"
+];
 
-  // Apothecary
-  var apothecary = ["The Alchemical Essence",
+// Apothecary
+var apothecary = ["The Alchemical Essence",
   "Herb Haven",
   "Elixir Emporium",
   "Botanical Boutique",
@@ -189,10 +188,11 @@ var innNames = ["The Sleeping Dragon", "The Merry Maiden", "The Rusty Flagon", "
   "Wholesome Remedies",
   "Zen Zephyr Apothecary",
   "Healer's Hideaway",
-  "Sacred Salves"];
+  "Sacred Salves"
+];
 
-  // Array of possible names for random stores
-  var mixedStoresAndNames = [
+// Array of possible names for random stores
+var mixedStoresAndNames = [
     {
       Type: "Butcher",
       Name: ["Cleaver's Friend",
@@ -770,10 +770,10 @@ var innNames = ["The Sleeping Dragon", "The Merry Maiden", "The Rusty Flagon", "
       ]
     },
     // Add more types and names as needed
-  ];
+];
 
-     // List of possible weather conditions
-     var weatherConditions = [
+// List of possible weather conditions
+var weatherConditions = [
       "Cloudy & Humid: The sun beams brightly behind the clouds, that are sealing in the warm wet air.",
       "Sunny & Breezy: The warm rays dance through the swaying leaves, creating a gentle, refreshing breeze.",
       "Misty & Serene: The mist envelops the landscape in a tranquil, ethereal embrace, softening all sounds.",
@@ -805,16 +805,133 @@ var innNames = ["The Sleeping Dragon", "The Merry Maiden", "The Rusty Flagon", "
       "Muggy & Heavy: The air hangs heavy and moist, clinging to the skin with a muggy, oppressive weight.",
       "Damp & Dreary: The dampness seeps into everything, casting a dreary, despondent pall over the landscape.",
       "Clear & Starry: The cloudless night sky sparkles with a myriad of stars, casting a clear, celestial glow over the world.",
-    ];
+];
 
-function toggleCollapse(id) {
-    var content = document.getElementById(id);
-    if (content.style.display === "none") {
-      content.style.display = "block"; // Show the content
-    } else {
-      content.style.display = "none"; // Hide the content
-    }
-  }
+var npcList = [ 
+{
+Race: 'Dwarf',
+Name: ['Dug',
+'Rupert',
+'Mary',
+'Sarah'],
+Clan: ['Stonefist',
+'Rocktip',
+'Forgelighter',
+'Ingotsoul']
+},
+{
+Race: 'Human',
+Name: ['Dylan',
+'Rose',
+'Simon',
+'Deadre'],
+Clan: ['Cotswold',
+'williams',
+'smith',
+'Rogers']
+}
+]
+
+var mood = [
+  "Happy", "Sad", "Excited", "Angry", "Anxious", "Calm", "Confused", "Content",
+  "Depressed", "Energetic", "Enthusiastic", "Frustrated", "Grateful", "Guilty", "Hopeful", "Insecure", "Irritated",
+  "Lonely", "Loved", "Mellow", "Nervous", "Optimistic", "Overwhelmed", "Peaceful", "Proud", "Relaxed", "Restless",
+  "Satisfied", "Shocked", "Stressed", "Surprised", "Thankful", "Tired", "Unsettled", "Upset", "Worried", "Amused", "Bored", "Cheerful", "Comfortable",
+  "Defensive", "Disappointed", "Embarrassed", "Enraged", "Gloomy", "Giddy", "Hopeless", "Indifferent", "Inspired", "Jealous", "Lethargic"
+]
+
+var object = [
+  "A battle-axe strapped to their back",
+  "A small lamp hooked on their belt",
+  "A leather-bound grimoire poking out of their satchel",
+  "A vial of shimmering potion hanging from a necklace",
+  "A crystal orb nestled in their palm",
+  "A quiver of enchanted arrows slung over their shoulder",
+  "A carefully woven cloak draped over their shoulders",
+  "An amulet pulsating with energy around their neck",
+  "A pouch of herbs fastened to their belt",
+  "A shimmering sword sheathed at their side",
+  "A pair of ancient runes etched onto their gauntlets",
+  "A staff held in their hand",
+  "They wear a set of lockpicks concealed as boot straps",
+  "A dragon scale shield strapped to their back",
+  "Compasses hang from their belt",
+  "Wings crafted from iridescent feathers strapped to their back",
+  "They toy with a pocket watch, then tuck it into their vest",
+  "A fairy fliters around their head",
+  "A set of throwing knives nestled in their belt",
+  "They wear a broach adorned with a glowing phoenix feather",
+  "A heavily inscribed map peaks out from inside their cloak",
+  "Smiths forging gloves hang from their belt",
+  "A small dragon perched on their shoulder",
+  "A flute tucked into their belt",
+  "Bottles of elixirs strung about their body",
+  "A pair of goggles fastened to their head",
+  "A large ring adorning their left hand",
+  "They carry a satchel containing spell components and alchemical ingredients bursting at the seams",
+  "Diamond Earrings glisten from their purchase in their ears",
+  "A horn tied to their belt",
+  "A buckler strapped to their forearm",
+  "A crystal pendant containing a miniature storm cloud swirling with lightning, hangs around their neck",
+  "A pair of bracers strapped tightly to their forearms",
+  "A harp case strapped to their back",
+  "Boots that seam to shimmer adorn their feet",
+  "They wear a mask hiding most of their face",
+  "A jeweled crown hangs from their belt, like a trophy",
+  "A flask of liquid white light glows gently from within their satchel",
+  "A multitude of rings adorn their hands",
+  "A bag of marbles clinking softly in their hand",
+  "Velvet gloves fit snuggly on their hands",
+  "A scarf wraps clumsily around their neck",
+  "A crystal ball floats a foot in front of their chest",
+  "They wear a belt adorned with vials of elemental essences",
+  "Flowers seeming to blossom from around their boots",
+  "A think tome hangs against their hip on a heavy metal chain"
+]
+
+var physicalTraits = [
+  'Heavily scarred', 'Ruddy cheeked', 'One-armed', 'Piercing eyed', 'Broad-shouldered',
+  'Tattooed', 'Bald', 'Curly-haired', 'strong chinned', 'Stubble-bearded', 'Freckled', 'noseless', 'Cross-eyed',
+  'Long-limbed', 'Double-jointed', 'Hunchbacked', 'Hook-nosed', 'Bow-legged', 'Albino', 'Pockmarked',
+  'Hairy', 'toothless', 'pegged legged', 'Stooped', 'Dimpled', 'Bushy eyebrowed', 'Long-fingered',
+  'Sallow-skinned', 'Stocky', 'Broken nosed', 'Cleft chined', 'Earringed', 'Wiry', 'under dressed', 'Scarred face',
+  'Glass-eyed', 'earing ladened', 'hook handed', 'Snaggle-toothed', 'Bandaged', 'Limping', 'Portly',
+  'Mismatched eyed', 'perfectly manicured', 'Broad-nosed', 'Thick-lipped', 'chime wearing', 'Harelipped', 'Lanky'
+]
+
+function npcsimple() {
+  var randomPhysicalTraits = physicalTraits[Math.floor(Math.random() * physicalTraits.length)];
+  var randomMood = mood[Math.floor(Math.random() * mood.length)];
+  var randomObject = object[Math.floor(Math.random() * object.length)];
+
+  var randomRaceIndex = Math.floor(Math.random() * npcList.length);
+  var selectedRace = npcList[randomRaceIndex];
+
+  // Get a random name based on the selected race
+  var randomNameIndex = Math.floor(Math.random() * selectedRace.Name.length);
+  var randomClanIndex = Math.floor(Math.random() * selectedRace.Clan.length);
+  var randomName = selectedRace.Name[randomNameIndex] + ' ' + selectedRace.Clan[randomClanIndex];
+
+  var responseDiv = document.createElement('div');
+  responseDiv.id = 'response';
+  responseDiv.className = 'alert';
+  responseDiv.innerHTML = '"' + randomName + '"' + "<br>" + 'A ' + randomPhysicalTraits+ ' ' + selectedRace.Race + '.' + "<br>" + randomObject + '.' + "<br>" + 'They look ' + randomMood + '.' + "<br>"
+
+  // Create the close button for the response
+  var closeButton = document.createElement('button');
+  closeButton.type = 'button';
+  closeButton.className = 'btn-close';
+  closeButton.setAttribute('aria-label', 'Close');
+  closeButton.onclick = function() {
+    responseDiv.remove(); // Remove the specific response container when the close button is clicked
+  };
+  // Append the close button to the response container
+  responseDiv.appendChild(closeButton);
+  // Add the response to the document body
+  var secondChild = document.body.childNodes[2];
+  document.body.insertBefore(responseDiv, secondChild);
+}
+
 
   function small2() {
     // Randomly select names for the Inn and General Store
@@ -827,17 +944,31 @@ function toggleCollapse(id) {
   
     // Return the list of small town locations
     var responseDiv = document.createElement('div');
-    responseDiv.id = 'response';
     responseDiv.className = 'alert';
+    responseDiv.id = 'response';
+    // Construct the content of the response
     responseDiv.innerHTML = "<ul style='list-style: none;'>" +
-    "<li>Town: " + randomTownName + "</li>" +
-                           "<li>Inn: " + randomInnName + "</li>" +
-                           "<li>General Store: " + randomGeneralStoreName + "</li>" +
-                           "<li>Unique Location: " + randomUniqueLocation + "</li>" +
-                           "</ul>" +
-                           "<button type='button' class='btn-close' aria-label='Close' onclick='hide()'></button>";
-    
-    document.body.appendChild(responseDiv);
+      "<li>Town: " + randomTownName + "</li>" +
+      "<li>Inn: " + randomInnName + "</li>" +
+      "<li>General Store: " + randomGeneralStoreName + "</li>" +
+      "<li>Unique Location: " + randomUniqueLocation + "</li>" +
+      "</ul>";
+  
+    // Create the close button for the response
+    var closeButton = document.createElement('button');
+    closeButton.type = 'button';
+    closeButton.className = 'btn-close';
+    closeButton.setAttribute('aria-label', 'Close');
+    closeButton.onclick = function() {
+      responseDiv.remove(); // Remove the specific response container when the close button is clicked
+    };
+  
+    // Append the close button to the response container
+    responseDiv.appendChild(closeButton);
+  
+    // Add the response to the document body
+    var secondChild = document.body.childNodes[2];
+    document.body.insertBefore(responseDiv, secondChild);
   }
 
   function weather2() {
@@ -848,11 +979,20 @@ function toggleCollapse(id) {
     var responseDiv = document.createElement('div');
     responseDiv.id = 'response';
     responseDiv.className = 'alert';
-    responseDiv.innerHTML = weatherConditions[randomIndex] + "<br>" +
-  "<button type='button' class='btn-close' aria-label='Close' onclick='hide()'></button>";
-
-  const currentDiv = document.getElementById('Response')
-  document.body.insertBefore(responseDiv, currentDiv)
+    responseDiv.innerHTML = weatherConditions[randomIndex] + "<br>"
+    // Create the close button for the response
+    var closeButton = document.createElement('button');
+    closeButton.type = 'button';
+    closeButton.className = 'btn-close';
+    closeButton.setAttribute('aria-label', 'Close');
+    closeButton.onclick = function() {
+      responseDiv.remove(); // Remove the specific response container when the close button is clicked
+    };
+    // Append the close button to the response container
+    responseDiv.appendChild(closeButton);
+    // Add the response to the document body
+    var secondChild = document.body.childNodes[2];
+    document.body.insertBefore(responseDiv, secondChild);
   }
 
 
@@ -874,6 +1014,7 @@ function toggleCollapse(id) {
     responseDiv.style.display = "block";
 }
 
+// old weather plains geo location idea
 function plains() {
   // List of possible weather conditions
   var weatherConditions = [
@@ -894,6 +1035,7 @@ function plains() {
   responseDiv.style.display = "block";
 }
 
+// old weather mountain geo location idea
 function mountains() {
   // List of possible weather conditions
   var weatherConditions = [
@@ -914,6 +1056,7 @@ responseDiv.innerHTML = weatherConditions[randomIndex] + "<br>" +
 responseDiv.style.display = "block";
 }
 
+// old radio npc idea
 document.getElementById('NPC-Submit').addEventListener('click', function(event) {
   event.preventDefault(); // Prevent the default form submission
 
@@ -965,6 +1108,7 @@ document.getElementById('NPC-Submit').addEventListener('click', function(event) 
 
 );
 
+// old Small town generator
 function small() {
   // Randomly select names for the Inn and General Store
   var randomTownName = townNames[Math.floor(Math.random() * townNames.length)];
@@ -986,6 +1130,7 @@ function small() {
   responseDiv.style.display = "block";
 }
 
+// old Medium town generator
 function medium() {
   // Randomly select names for the Inn and General Store
   var randomInns = [];
@@ -1044,6 +1189,7 @@ while (randomStoreAndName.length < 3) {
   responseDiv.style.display = "block";
 }
 
+// old Large town generator
 function large() {
   // Randomly select names for the Inn and General Store
   var randomInns = [];
@@ -1125,22 +1271,4 @@ function large() {
                          "</ul>" + 
                          "<button type='button' class='btn-close' aria-label='Close' onclick='hide()'></button>";
   responseDiv.style.display = "block";
-}
-   
-function copyText() {
-     
-  /* Select text area by id*/
-  var Text = document.getElementById("response");
-
-  /* Select the text inside text area. */
-  Text.select();
-
-  /* Copy selected text into clipboard */
-  navigator.clipboard.writeText(Text.value);
-
-}
-
-function hide() {
-  var responseDiv = document.getElementById("response");
-  responseDiv.style.display = "none";
 }
