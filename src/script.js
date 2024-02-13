@@ -915,7 +915,7 @@ Copper: [],
 Gemstones: [
   'Azurite (opaque mottled deep blue) 10g',
   'Banded agate (translucent striped brown, blue, white, or red) 10g',
-  'Blue quartz (transparent pale blue)',
+  'Blue quartz (transparent pale blue) 10g',
   'Eye agate (translucent circles of gray, white, brown, blue, or green) 10g',
   'Hematite (opaque gray-black) 10g',
   'Lapis lazuli (opaque light and dark blue with yellow flecks) 10g',
