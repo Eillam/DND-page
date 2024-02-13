@@ -1,4 +1,4 @@
-// to create my functions for the random generator
+// ARRAYS AND VARIABLES
 
 // Array of possible names for the Inn
 var innNames = ["The Sleeping Dragon", "The Merry Maiden", "The Rusty Flagon", "The Golden Crown",
@@ -28,7 +28,8 @@ var innNames = ["The Sleeping Dragon", "The Merry Maiden", "The Rusty Flagon", "
   "The Tranquil Turtle",
   "The Vibrant Vixen",
   "The Zephyr Zebra",
-"The Whimsical Wyvern"];
+  "The Whimsical Wyvern"
+];
 
 // Array of possible unique locations
 var uniqueLocations = ["the old mill: 'it's is said to be home to a coven of hags'",
@@ -60,7 +61,8 @@ var uniqueLocations = ["the old mill: 'it's is said to be home to a coven of hag
   "the malevolent mesa: 'rumored to be the site of an ancient curse'",
   "the profane pit: 'where unspeakable horrors lurk'",
   "the sinister spire: 'shrouded in dark enchantments'",
-"the accursed atoll: 'where the sea devours all who approach'"];
+  "the accursed atoll: 'where the sea devours all who approach'"
+];
   
 // Array of possible names for a town
 var townNames = ["Oakwood", "Riverside", "Willowbrook", "Meadowvale", "Silvercrest", "Hearthstone", "Frostford", "Pinegrove", "Stonehaven", "Windsong",
@@ -93,7 +95,8 @@ var townNames = ["Oakwood", "Riverside", "Willowbrook", "Meadowvale", "Silvercre
   "Mistyvale",
   "Oakridge",
   "Riverbend",
-"Silverwood"];
+  "Silverwood"
+];
 
 // Array of possible names for the General Store
 var generalStoreNames = ["Traders' Emporium", "The Market Basket", "Sundry Supplies", "The Trading Post", "The Bargain Bazaar",
@@ -122,7 +125,8 @@ var generalStoreNames = ["Traders' Emporium", "The Market Basket", "Sundry Suppl
   "The Premier Purveyor",
   "The Sterling Storefront",
   "The Prime Provisioner",
-"The Exceptional Emporium"];
+  "The Exceptional Emporium"
+];
 
 // Blacksmith
 var blacksmith = ["The Iron Forger",
@@ -807,6 +811,7 @@ var weatherConditions = [
       "Clear & Starry: The cloudless night sky sparkles with a myriad of stars, casting a clear, celestial glow over the world.",
 ];
 
+// this list needs completing
 var npcList = [ 
 {
 Race: 'Dwarf',
@@ -899,6 +904,43 @@ var physicalTraits = [
   'Mismatched eyed', 'perfectly manicured', 'Broad-nosed', 'Thick-lipped', 'chime wearing', 'Harelipped', 'Lanky'
 ]
 
+var lootFive = [
+  {
+Platinum: [0,1,2],
+Gold: [],
+Silver: [],
+Copper: [],
+  },
+  {
+Gemstones: [
+  'Azurite (opaque mottled deep blue) 10g',
+  'Banded agate (translucent striped brown, blue, white, or red) 10g',
+  'Blue quartz (transparent pale blue)',
+  'Eye agate (translucent circles of gray, white, brown, blue, or green) 10g',
+  'Hematite (opaque gray-black) 10g',
+  'Lapis lazuli (opaque light and dark blue with yellow flecks) 10g',
+  'Malachite (opaque striated light and dark green) 10g',
+  'Moss agate (translucent pink or yellow-white with mossy gray or green markings) 10g',
+  'Obsidian (opaque black) 10g',
+  'Rhodochrosite (opaque light pink) 10g',
+  'Tiger eye (translucent brown with golden center) 10g',
+  'Turquoise (opaque light blue-green) 10g',
+]
+  },
+  {
+Items: [
+  "Alchemist's supplies", "Brewer's supplies", "Calligrapher's supplies", "Carpenter's tools", "Cartographer's tools", "Cobbler's tools", "Cook's utensils", "Glassblower's tools", "Jeweler's tools", "Leatherworker's tools", "Mason's tools", "Painter's supplies", "Potter's tools", "Smith's tools", "Tinker's tools", "Weaver's tools", "Woodcarver's tools", "Dice set", "Dragonchess set", "Playing card set", "Three-Dragon Ante set", "Herbalism kit", "Bagpipes", "Drum", "Dulcimer", "Flute", "Lute", "Lyre", "Horn", "Pan flute", "Shawm", "Viol", "Navigator's tools", "Poisoner's kit", "Thieves' tools", "Disguise kit", "Forgery kit", "Abacus", "Acid (vial)", "Alchemist's fire (flask)", "Arrows (20)", "Blowgun needles (50)", "Crossbow bolts (20)", "Sling bullets (20)", "Antitoxin (vial)", "Arcane focus: Crystal", "Arcane focus: Orb", "Arcane focus: Rod", "Arcane focus: Staff", "Arcane focus: Wand", "Backpack", "Ball bearings (bag of 1,000)", "Bedroll", "Bell", "Blanket", "Block and tackle", "Book", "Bottle, glass", "Bucket", "Caltrops (bag of 20)", "Candle", "Case, crossbow bolt", "Case, map or scroll", "Chain (10 feet)", "Chalk (10 piece)", "Climber's kit", "Clothes, common", "Clothes, costume", "Clothes, fine", "Clothes, traveler's", "Clothes, Cold Weather", "Component pouch", "Crowbar", "Sprig of mistletoe", "Little Wolf Totem", "Yew wand", "Fishing tackle", "Tankard", "Grappling hook", "Hammer", "Sledge Hammer", "Healer's kit", "Holy symbol", "Amulet", "Royal House Emblem", "Reliquary", "Holy water (flask)", "Hourglass", "Hunting trap", "Ink (1 ounce bottle) and Ink pen", "Ladder (10-foot)", "Lamp", "Lantern, bullseye", "Lantern, hooded", "Lockbox", "Magnifying glass", "Manacles", "Mess kit", "Mirror, steel", "Oil (flask)", "Perfume (vial)", "Pick, miner's", "Piton", "Poison, basic (vial)", "Pole (10-foot)", "Pot, iron", "Potion of healing", "Quiver", "Ram, portable", "Rations (1 day)", "Robes", "Rope, hempen (50 feet)", "Rope, silk (50 feet)", "Scale, merchant's", "Sealing wax", "Shovel", "Signal whistle", "Signet ring", "Spellbook", "Spikes, iron (10)", "Spyglass", "Tent, two-person", "Tinderbox", "Torch", "Vial", "Waterskin", "Whetstone"
+]
+  },
+  {
+MagicItem: [
+  "Potion of healing", "Spell scroll (cantrip)", "Potion of climbing", "Spell scroll (1st level)", "Spell scroll (2nd level)", "Potion of greater healing", "Bag of holding", "Driftglobe", "Potion of greater healing", "Potion of fire breath", "Potion of resistance", "+1 ammunition", "Potion of animal friendship", "Potion of hill giant strength", "Potion of growth", "Potion of water breathing", "Spell scroll (2nd level)", "Spell scroll (3rd level)", "Bag of holding", "Keoghtom's ointment", "Oil of slipperiness", "Dust of disappearance", "Dust of dryness", "Dust of sneezing and choking", "Elemental gem", "Philter of love", "Alchemy jug", "Cap of water breathing", "Cloak of the manta ray", "Driftglobe", "Goggles of night", "Helm of comprehending languages", "Immovable rod", "Lantern of revealing", "Mariner's armor", "Mithral armor", "Potion of poison", "Ring of swimming", "Robe of useful items", "Rope of climbing", "Saddle of the cavalier", "Wand of magic detection", "Wand of secrets", "Potion of superior healing", "Spell scroll (4th level)", "+2 ammunition", "Potion of clairvoyance", "Potion of diminution", "Potion of gaseous form", "Potion of frost giant strength", "Potion of stone giant strength", "Potion of heroism", "Potion of invulnerability", "Potion of mind reading", "Spell scroll (5th level)", "Elixir of health", "Oil of etherealness", "Potion of fire giant strength", "Quaal's feather token", "Scroll of protection", "Bag of beans", "Bead of force", "Chime of opening", "Decanter of endless water", "Eyes of minute seeing", "Folding boat", "Heward's handy haversack", "Horseshoes of speed", "Necklace of fireballs", "Periapt of health", "Sending stones"
+]
+  },
+]
+
+//FUNCTIONS BELOW
+
 function npcsimple() {
   var randomPhysicalTraits = physicalTraits[Math.floor(Math.random() * physicalTraits.length)];
   var randomMood = mood[Math.floor(Math.random() * mood.length)];
@@ -933,7 +975,7 @@ function npcsimple() {
 }
 
 
-  function small2() {
+function small2() {
     // Randomly select names for the Inn and General Store
     var randomTownName = townNames[Math.floor(Math.random() * townNames.length)];
     var randomInnName = innNames[Math.floor(Math.random() * innNames.length)];
@@ -969,9 +1011,9 @@ function npcsimple() {
     // Add the response to the document body
     var secondChild = document.body.childNodes[2];
     document.body.insertBefore(responseDiv, secondChild);
-  }
+}
 
-  function weather2() {
+function weather2() {
     // Generate a random index to select a weather condition from the list
     var randomIndex = Math.floor(Math.random() * weatherConditions.length);
 
@@ -993,12 +1035,10 @@ function npcsimple() {
     // Add the response to the document body
     var secondChild = document.body.childNodes[2];
     document.body.insertBefore(responseDiv, secondChild);
-  }
+}
 
-
-
-  // old weather functions, that maybe used again later
-  function coast() {
+// old weather functions, that maybe used again later
+function coast() {
     // List of possible weather conditions
     var weatherConditions = [
         "Sunny and Serene: The coastal region basks in the warmth of the sun, casting a golden glow across the glistening waters. Gentle sea breezes carry the fresh scent of salt and seaweed, inviting locals and tourists alike to embrace the day. Seabirds soar gracefully overhead, their calls blending harmoniously with the rhythm of the rolling waves.", "Misty and Mysterious: A veil of mist envelops the coastal landscape, shrouding cliffs and coves in an ethereal embrace. The distant cry of foghorns echoes through the air, mingling with the haunting lullaby of the sea. Silhouettes of ships emerge from the fog, their presence an enigmatic dance between visibility and obscurity.", "Windy and Wild: The coastal winds howl with untamed fervor, sculpting the waves into frothy peaks that crash against rugged shores. Sailors navigate the tempestuous waters with skill and determination, embracing the exhilarating challenge of the open sea. Seabirds perform daring aerial acrobatics, riding the gusts with effortless grace.", "Stormy and Spectacular: Nature unleashes its fury upon the coast, painting the sky in tumultuous shades of gray. Thunder reverberates across the horizon, punctuating the relentless drumming of rain against the shoreline. Waves rise and fall with unrestrained power, showcasing the awe-inspiring might of the ocean.", "Calming and Tranquil: A sense of tranquility envelops the coastal haven, offering respite from the chaos of urban life. The sun dips beneath the waves, casting a tapestry of warm hues across the evening sky. Seashells adorn the sandy shores, whispering tales of the timeless bond between land and sea."
@@ -1272,3 +1312,58 @@ function large() {
                          "<button type='button' class='btn-close' aria-label='Close' onclick='hide()'></button>";
   responseDiv.style.display = "block";
 }
+
+// Loot array based on levels 1-5
+function loot5() {
+  const randomIndex = Math.floor(Math.random() * lootFive.length);
+  const selectedLoot = lootFive[randomIndex];
+
+  if (randomIndex === 0) {
+    const platinumAnswer = selectedLoot.Platinum[Math.floor(Math.random() * selectedLoot.Platinum.length)];
+    const goldAnswer = Math.floor(Math.random() * 100) + 1;
+    const silverAnswer = Math.floor(Math.random() * 100) + 1;
+    const copperAnswer = Math.floor(Math.random() * 100) + 1;
+
+
+  var responseDiv = document.createElement('div');
+  responseDiv.id = 'response';
+  responseDiv.className = 'alert';
+  responseDiv.innerHTML = "Platinum: " + platinumAnswer + "<br>" + "Gold: " + goldAnswer + "<br>" + "Silver: " + silverAnswer + "<br>" + "Copper: " + copperAnswer + "<br>"
+
+  // Create the close button for the response
+  var closeButton = document.createElement('button');
+  closeButton.type = 'button';
+  closeButton.className = 'btn-close';
+  closeButton.setAttribute('aria-label', 'Close');
+  closeButton.onclick = function() {
+    responseDiv.remove(); // Remove the specific response container when the close button is clicked
+  };
+  // Append the close button to the response container
+  responseDiv.appendChild(closeButton);
+  // Add the response to the document body
+  var secondChild = document.body.childNodes[2];
+  document.body.insertBefore(responseDiv, secondChild); } else {
+    for (const key in selectedLoot) {
+      if (Array.isArray(selectedLoot[key])) {
+        const randomItem = selectedLoot[key][Math.floor(Math.random() * selectedLoot[key].length)]; 
+    var responseDiv = document.createElement('div');
+    responseDiv.id = 'response';
+    responseDiv.className = 'alert';
+    responseDiv.innerHTML = randomItem + "<br>"
+  
+    // Create the close button for the response
+    var closeButton = document.createElement('button');
+    closeButton.type = 'button';
+    closeButton.className = 'btn-close';
+    closeButton.setAttribute('aria-label', 'Close');
+    closeButton.onclick = function() {
+      responseDiv.remove(); // Remove the specific response container when the close button is clicked
+    };
+    // Append the close button to the response container
+    responseDiv.appendChild(closeButton);
+    // Add the response to the document body
+    var secondChild = document.body.childNodes[2];
+    document.body.insertBefore(responseDiv, secondChild);
+  }
+  }
+}}
