@@ -1,5 +1,7 @@
 // ARRAYS AND VARIABLES
 
+
+
 // Array of possible names for the Inn
 var innNames = ["The Sleeping Dragon", "The Merry Maiden", "The Rusty Flagon", "The Golden Crown",
   "The Drunken Unicorn",
@@ -1367,3 +1369,77 @@ function loot5() {
   }
   }
 }}
+
+function diceFour() {
+  const fourResult = Math.floor(Math.random() * 4) + 1;
+
+  // Check if the toast container already exists
+  var toastContainer = document.getElementById('toast-container');
+
+  // If it doesn't exist, create a new one
+  if (!toastContainer) {
+    toastContainer = document.createElement('div');
+    toastContainer.id = 'toast-container';
+    toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+    document.body.appendChild(toastContainer);
+  }
+
+  // Create a new toast
+  var toastDiv = document.createElement('div');
+  toastDiv.className = 'toast';
+  toastDiv.setAttribute('role', 'alert');
+  toastDiv.setAttribute('aria-live', 'assertive');
+  toastDiv.setAttribute('aria-atomic', 'true');
+  toastDiv.innerHTML = `<div class="toast-header">
+    <strong class="me-auto">D4 Result</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    ${fourResult}
+  </div>`;
+
+  // Append the new toast to the existing container
+  toastContainer.appendChild(toastDiv);
+
+  // Create and show the toast
+  var newToastEl = toastContainer.lastChild;
+  var newToast = new bootstrap.Toast(newToastEl);
+  newToast.show();
+}
+
+function diceSix() {
+  const fourResult = Math.floor(Math.random() * 6) + 1;
+
+  // Check if the toast container already exists
+  var toastContainer = document.getElementById('toast-container');
+
+  // If it doesn't exist, create a new one
+  if (!toastContainer) {
+    toastContainer = document.createElement('div');
+    toastContainer.id = 'toast-container';
+    toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+    document.body.appendChild(toastContainer);
+  }
+
+  // Create a new toast
+  var toastDiv = document.createElement('div');
+  toastDiv.className = 'toast';
+  toastDiv.setAttribute('role', 'alert');
+  toastDiv.setAttribute('aria-live', 'assertive');
+  toastDiv.setAttribute('aria-atomic', 'true');
+  toastDiv.innerHTML = `<div class="toast-header">
+    <strong class="me-auto">D6 Result</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    ${fourResult}
+  </div>`;
+
+  // Append the new toast to the existing container
+  toastContainer.appendChild(toastDiv);
+
+  // Create and show the toast
+  var newToastEl = toastContainer.lastChild;
+  var newToast = new bootstrap.Toast(newToastEl);
+  newToast.show();
+}
