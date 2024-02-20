@@ -817,14 +817,11 @@ var weatherConditions = [
 var npcList = [ 
 {
 Race: 'Dwarf',
-Name: ['Dug',
-'Rupert',
-'Mary',
-'Sarah'],
+Name: ["Adrik", "Alberich", "Baern", "Barendd", "Beloril", "Brottor", "Dain", "Dalgal", "Darrak", "Delg", "Duergath", "Dworic", "Eberk", "Einkil", "Elaim", "Erias", "Fallond", "Fargrim", "Gardain", "Gilthur", "Gimgen", "Gimurt", "Harbek", "Kildrak", "Kilvar", "Morgran", "Morkral", "Nalral", "Nordak", "Nuraval", "Oloric", "Olunt", "Orsik", "Oskar", "Rangrim", "Reirak", "Rurik", "Taklinn", "Thoradin", "Thorin", "Thradal", "Tordek", "Traubon", "Travok", "Ulfgar", "Uraim", "Veit", "Vonbin", "Vondal", "Whurbin", "Anbera", "Artin", "Audhild", "Balifra", "Barbena", "Bardryn", "Bolhild", "Dagnal", "Dariff", "Delre", "Diesa", "Eldeth", "Eridred", "Falkrunn", "Fallthra", "Finellen", "Gillydd", "Gunnloda", "Gurdis", "Helgret", "Helja", "Hlin", "Ilde", "Jarana", "Kathra", "Kilia", "Kristryd", "Liftrasa", "Marastyr", "Mardred", "Morana", "Nalaed", "Nora", "Nurkara", "Oriff", "Ovina", "Riswynn", "Sannl", "Therlin", "Thodris", "Torbera", "Tordrid", "Torgga", "Urshar", "Valida", "Vistra", "Vonana", "Werydd", "Whurdred", "Yurgunn"],
 Clan: ['Stonefist',
 'Rocktip',
 'Forgelighter',
-'Ingotsoul']
+'Ingotsoul', "Aranore", "Balderk", "Battlehammer", "Bigtoe", "Bloodkith", "Bofdann", "Brawnanvil", "Brazzik", "Broodfist", "Burrowfound", "Caebrek", "Daerdahk", "Dankil", "Daraln", "Deepdelver", "Durthane", "Eversharp", "Fallack", "Fireforge", "Foamtankard", "Frostbeard", "Glanhig", "Goblinbane", "Goldfinder", "Gorunn", "Graybeard", "Hammerstone", "Helcral", "Holderhek", "Ironfist", "Loderr", "Lutgehr", "Morigak", "Orcfoe", "Rakankrak", "Ruby-Eye", "Rumnaheim", "Silveraxe", "Silverstone", "Steelfist", "Stoutale", "Strakeln", "Strongheart", "Thrahak", "Torevir", "Torunn", "Trollbleeder", "Trueanvil", "Trueblood", "Ungart"]
 },
 {
 Race: 'Human',
@@ -1429,6 +1426,302 @@ function diceSix() {
   toastDiv.setAttribute('aria-atomic', 'true');
   toastDiv.innerHTML = `<div class="toast-header">
     <strong class="me-auto">D6 Result</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    ${fourResult}
+  </div>`;
+
+  // Append the new toast to the existing container
+  toastContainer.appendChild(toastDiv);
+
+  // Create and show the toast
+  var newToastEl = toastContainer.lastChild;
+  var newToast = new bootstrap.Toast(newToastEl);
+  newToast.show();
+}
+
+function diceTen() {
+  const fourResult = Math.floor(Math.random() * 10) + 1;
+
+  // Check if the toast container already exists
+  var toastContainer = document.getElementById('toast-container');
+
+  // If it doesn't exist, create a new one
+  if (!toastContainer) {
+    toastContainer = document.createElement('div');
+    toastContainer.id = 'toast-container';
+    toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+    document.body.appendChild(toastContainer);
+  }
+
+  // Create a new toast
+  var toastDiv = document.createElement('div');
+  toastDiv.className = 'toast';
+  toastDiv.setAttribute('role', 'alert');
+  toastDiv.setAttribute('aria-live', 'assertive');
+  toastDiv.setAttribute('aria-atomic', 'true');
+  toastDiv.innerHTML = `<div class="toast-header">
+    <strong class="me-auto">D10 Result</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    ${fourResult}
+  </div>`;
+
+  // Append the new toast to the existing container
+  toastContainer.appendChild(toastDiv);
+
+  // Create and show the toast
+  var newToastEl = toastContainer.lastChild;
+  var newToast = new bootstrap.Toast(newToastEl);
+  newToast.show();
+}
+
+function diceEight() {
+  const fourResult = Math.floor(Math.random() * 8) + 1;
+
+  // Check if the toast container already exists
+  var toastContainer = document.getElementById('toast-container');
+
+  // If it doesn't exist, create a new one
+  if (!toastContainer) {
+    toastContainer = document.createElement('div');
+    toastContainer.id = 'toast-container';
+    toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+    document.body.appendChild(toastContainer);
+  }
+
+  // Create a new toast
+  var toastDiv = document.createElement('div');
+  toastDiv.className = 'toast';
+  toastDiv.setAttribute('role', 'alert');
+  toastDiv.setAttribute('aria-live', 'assertive');
+  toastDiv.setAttribute('aria-atomic', 'true');
+  toastDiv.innerHTML = `<div class="toast-header">
+    <strong class="me-auto">D8 Result</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    ${fourResult}
+  </div>`;
+
+  // Append the new toast to the existing container
+  toastContainer.appendChild(toastDiv);
+
+  // Create and show the toast
+  var newToastEl = toastContainer.lastChild;
+  var newToast = new bootstrap.Toast(newToastEl);
+  newToast.show();
+}
+
+function diceTwelve() {
+  const fourResult = Math.floor(Math.random() * 12) + 1;
+
+  // Check if the toast container already exists
+  var toastContainer = document.getElementById('toast-container');
+
+  // If it doesn't exist, create a new one
+  if (!toastContainer) {
+    toastContainer = document.createElement('div');
+    toastContainer.id = 'toast-container';
+    toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+    document.body.appendChild(toastContainer);
+  }
+
+  // Create a new toast
+  var toastDiv = document.createElement('div');
+  toastDiv.className = 'toast';
+  toastDiv.setAttribute('role', 'alert');
+  toastDiv.setAttribute('aria-live', 'assertive');
+  toastDiv.setAttribute('aria-atomic', 'true');
+  toastDiv.innerHTML = `<div class="toast-header">
+    <strong class="me-auto">D12 Result</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    ${fourResult}
+  </div>`;
+
+  // Append the new toast to the existing container
+  toastContainer.appendChild(toastDiv);
+
+  // Create and show the toast
+  var newToastEl = toastContainer.lastChild;
+  var newToast = new bootstrap.Toast(newToastEl);
+  newToast.show();
+}
+
+function diceTwenty() {
+  const fourResult = Math.floor(Math.random() * 20) + 1;
+
+  // Check if the toast container already exists
+  var toastContainer = document.getElementById('toast-container');
+
+  // If it doesn't exist, create a new one
+  if (!toastContainer) {
+    toastContainer = document.createElement('div');
+    toastContainer.id = 'toast-container';
+    toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+    document.body.appendChild(toastContainer);
+  }
+
+  // Create a new toast
+  var toastDiv = document.createElement('div');
+  toastDiv.className = 'toast';
+  toastDiv.setAttribute('role', 'alert');
+  toastDiv.setAttribute('aria-live', 'assertive');
+  toastDiv.setAttribute('aria-atomic', 'true');
+  toastDiv.innerHTML = `<div class="toast-header">
+    <strong class="me-auto">D20 Result</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    ${fourResult}
+  </div>`;
+
+  // Append the new toast to the existing container
+  toastContainer.appendChild(toastDiv);
+
+  // Create and show the toast
+  var newToastEl = toastContainer.lastChild;
+  var newToast = new bootstrap.Toast(newToastEl);
+  newToast.show();
+}
+
+function dcEasy() {
+  const fourResult = Math.floor(Math.random() * (12 - 8 + 1)) + 8;
+
+  // Check if the toast container already exists
+  var toastContainer = document.getElementById('toast-container');
+
+  // If it doesn't exist, create a new one
+  if (!toastContainer) {
+    toastContainer = document.createElement('div');
+    toastContainer.id = 'toast-container';
+    toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+    document.body.appendChild(toastContainer);
+  }
+
+  // Create a new toast
+  var toastDiv = document.createElement('div');
+  toastDiv.className = 'toast';
+  toastDiv.setAttribute('role', 'alert');
+  toastDiv.setAttribute('aria-live', 'assertive');
+  toastDiv.setAttribute('aria-atomic', 'true');
+  toastDiv.innerHTML = `<div class="toast-header">
+    <strong class="me-auto">DC Easy result</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    ${fourResult}
+  </div>`;
+
+  // Append the new toast to the existing container
+  toastContainer.appendChild(toastDiv);
+
+  // Create and show the toast
+  var newToastEl = toastContainer.lastChild;
+  var newToast = new bootstrap.Toast(newToastEl);
+  newToast.show();
+}
+
+function dcMedium() {
+  const fourResult = Math.floor(Math.random() * (17 - 13 + 1)) + 13;
+
+  // Check if the toast container already exists
+  var toastContainer = document.getElementById('toast-container');
+
+  // If it doesn't exist, create a new one
+  if (!toastContainer) {
+    toastContainer = document.createElement('div');
+    toastContainer.id = 'toast-container';
+    toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+    document.body.appendChild(toastContainer);
+  }
+
+  // Create a new toast
+  var toastDiv = document.createElement('div');
+  toastDiv.className = 'toast';
+  toastDiv.setAttribute('role', 'alert');
+  toastDiv.setAttribute('aria-live', 'assertive');
+  toastDiv.setAttribute('aria-atomic', 'true');
+  toastDiv.innerHTML = `<div class="toast-header">
+    <strong class="me-auto">DC Medium result</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    ${fourResult}
+  </div>`;
+
+  // Append the new toast to the existing container
+  toastContainer.appendChild(toastDiv);
+
+  // Create and show the toast
+  var newToastEl = toastContainer.lastChild;
+  var newToast = new bootstrap.Toast(newToastEl);
+  newToast.show();
+}
+
+function dcHard() {
+  const fourResult = Math.floor(Math.random() * (22 - 18 + 1)) + 18;
+
+  // Check if the toast container already exists
+  var toastContainer = document.getElementById('toast-container');
+
+  // If it doesn't exist, create a new one
+  if (!toastContainer) {
+    toastContainer = document.createElement('div');
+    toastContainer.id = 'toast-container';
+    toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+    document.body.appendChild(toastContainer);
+  }
+
+  // Create a new toast
+  var toastDiv = document.createElement('div');
+  toastDiv.className = 'toast';
+  toastDiv.setAttribute('role', 'alert');
+  toastDiv.setAttribute('aria-live', 'assertive');
+  toastDiv.setAttribute('aria-atomic', 'true');
+  toastDiv.innerHTML = `<div class="toast-header">
+    <strong class="me-auto">DC Hard result</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    ${fourResult}
+  </div>`;
+
+  // Append the new toast to the existing container
+  toastContainer.appendChild(toastDiv);
+
+  // Create and show the toast
+  var newToastEl = toastContainer.lastChild;
+  var newToast = new bootstrap.Toast(newToastEl);
+  newToast.show();
+}
+
+function dcVeryHard() {
+  const fourResult = Math.floor(Math.random() * (27 - 23 + 1)) + 23;
+
+  // Check if the toast container already exists
+  var toastContainer = document.getElementById('toast-container');
+
+  // If it doesn't exist, create a new one
+  if (!toastContainer) {
+    toastContainer = document.createElement('div');
+    toastContainer.id = 'toast-container';
+    toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+    document.body.appendChild(toastContainer);
+  }
+
+  // Create a new toast
+  var toastDiv = document.createElement('div');
+  toastDiv.className = 'toast';
+  toastDiv.setAttribute('role', 'alert');
+  toastDiv.setAttribute('aria-live', 'assertive');
+  toastDiv.setAttribute('aria-atomic', 'true');
+  toastDiv.innerHTML = `<div class="toast-header">
+    <strong class="me-auto">DC Very Hard result</strong>
     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
   </div>
   <div class="toast-body">
