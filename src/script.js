@@ -828,11 +828,20 @@ Race: 'Human',
 Name: ['Dylan',
 'Rose',
 'Simon',
-'Deadre'],
+'Deadre', "Adam", "Adelard", "Aldous", "Anselm", "Arnold", "Bernard", "Bertram", "Charles", "Clerebold", "Conrad", "Diggory", "Drogo", "Everard", "Frederick", "Geoffrey", "Gerald", "Gilbert", "Godfrey", "Gunter", "Guy", "Henry", "Heward", "Hubert", "Hugh", "Jocelyn", "John", "Lance", "Manfred", "Miles", "Nicholas", "Norman", "Odo", "Percival", "Peter", "Ralf", "Randal", "Raymond", "Reynard", "Richard", "Robert", "Roger", "Roland", "Rolf", "Simon", "Theobald", "Theodoric", "Thomas", "Timm", "William", "Wymar", "Adelaide", "Agatha", "Agnes", "Alice", "Aline", "Anne", "Avelina", "Avice", "Beatrice", "Cecily", "Egelina", "Eleanor", "Elizabeth", "Ella", "Eloise", "Elysande", "Emeny", "Emma", "Emmeline", "Ermina", "Eva", "Galiena", "Geva", "Giselle", "Griselda", "Hadwisa", "Helen", "Herleva", "Hugolina", "Ida", "Isabella", "Jacoba", "Jane", "Joan", "Juliana", "Katherine", "Margery", "Mary", "Matilda", "Maynild", "Millicent", "Oriel", "Rohesia", "Rosalind", "Rosamund", "Sarah", "Susannah", "Sybil", "Williamina", "Yvonne"],
 Clan: ['Cotswold',
-'williams',
-'smith',
-'Rogers']
+'Williams',
+'Smith',
+'Rogers', "Taylor", "Brown", "Davies", "Wilson", "Evans", "Thomas", "Johnson", "Roberts", "Robinson", "Thompson", "Walker", "White", "Harris", "Clark", "Lewis", "Young", "Hall", "Turner", "Martin", "Cooper", "Hill", "Ward", "Moore", "King", "Bennett", "Hughes", "Butler", "Morgan", "Davis", "Allen", "Wright", "Green", "Wood", "Mitchell", "Carter", "Edwards", "Richardson", "Bailey", "Parker", "Collins", "Morris", "Rogers", "Reed", "Cook", "Bell", "Phillips"]
+},
+{
+  Race: 'Dragonborn',
+  Name: [
+    "Akra", "Aasathra", "Antrara", "Arava", "Biri", "Blendaeth", "Burana", "Chassath", "Daar", "Dentratha", "Doudra", "Driindar", "Eggren", "Farideh", "Findex", "Furrele", "Gesrethe", "Gilkass", "Harann", "Havilar", "Hethress", "Hillanot", "Jaxi", "Jezean", "Jheri", "Kadana", "Kava", "Korinn", "Megren", "Mijira", "Mishann", "Nala", "Nuthra", "Perra", "Pogranix", "Pyxrin", "Quespa", "Raiann", "Rezena", "Ruloth", "Saphara", "Savaran", "Sora", "Surina", "Synthrin", "Tatyan", "Thava", "Uadjit", "Vezera", "Zykroff", "Adrex", "Arjhan", "Azzakh", "Balasar", "Baradad", "Bharash", "Bidreked", "Dadalan", "Dazzazn", "Direcris", "Donaar", "Fax", "Gargax", "Ghesh", "Gorbundus", "Greethen", "Heskan", "Hirrathak", "Ildrex", "Kaladan", "Kerkad", "Kiirith", "Kriv", "Maagog", "Medrash", "Mehen", "Mozikth", "Mreksh", "Mugrunden", "Nadarr", "Nithther", "Norkruuth", "Nykkan", "Pandjed", "Patrin", "Pijjirik", "Quarethon", "Rathkran", "Rhogar", "Rivaan", "Sethrekar", "Shamash", "Shedinn", "Srorthen", "Tarhun", "Torinn", "Trynnicus", "Valorean", "Vrondiss", "Zedaar"
+  ],
+  Clan: [
+    "Daardendrian", "Delmirev", "Dhyrktelonis", "Ebynichtomonis", "Esstyrlynn", "Fharngnarthnost", "Ghaallixirn", "Grrrmmballhyst", "Gygazzylyshrift", "Hashphronyxadyn", "Hshhsstoroth", "Imbixtellrhyst", "Jerynomonis", "Jharthraxyn", "Kerrhylon", "Kimbatuul", "Lhamboldennish", "Linxakasendalor", "Mohradyllion", "Mystan", "Nemmonis", "Norixius", "Ophinshtalajiir", "Orexijandilin", "Pfaphnyrennish", "Phrahdrandon", "Pyraxtallinost", "Qyxpahrgh", "Raghthroknaar", "Shestendeliath", "Skaarzborroosh", "Sumnarghthrysh", "Tiammanthyllish", "Turnuroth", "Umbyrphrael", "Vangdondalor", "Verthisathurgiesh", "Wivvyrholdalphiax", "Wystongjiir", "Xephyrbahnor", "Yarjerit", "Zzzxaaxthroth"
+  ]
 }
 ]
 
