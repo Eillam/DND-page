@@ -1001,6 +1001,166 @@ MagicItem: [
   },
 ]
 
+var lootTen = [
+  {
+    Platinum: [],
+    Gold: [],
+    Silver: [],
+    Copper: [],
+  },
+  {
+    Gemstones: [
+      'Alexandrite (transparent dark green) 500gp',
+      'Aquamarine (transparent pale blue-green) 500gp',
+      'Black pearl (opaque pure black) 500gp',
+      'Blue spinel (transparent deep blue) 500gp',
+      'Peridot (transparent rich olive green) 500gp',
+      'Topaz (transparent golden yellow) 500gp',
+      'Diamond 300gp'
+    ]
+  },
+  {
+    ArtObjets: [
+      	'Gold ring set with bloodstones 250gp',
+        'Carved ivory statuette 250gp',
+        'Large gold bracelet 250gp',
+        'Silver necklace with a gemstone pendant 250gp',
+        'Bronze crown 250gp',
+        'Silk robe with gold embroidery 250gp',
+        'Large well-made tapestry 250gp',
+        'Brass mug with jade inlay 250gp',
+        'Box of turquoise animal figurines 250gp',
+        'Gold bird cage with electrum filigree 250gp',
+        'An ornate tapestry depicting a high-ranking family of giants 250gp',
+        'The expertly stuffed and mounted remains of a Large Monstrosity native to the area 250gp',
+        'An abstract spiral sculpture carved from a fulgurite 250gp',
+        'A rowboat displayed inside a giant-sized green crystal bottle 250gp',
+        'An iridescent conch shell that echoes with the sounds of a maelstrom 250gp',
+        'A hefty ceramic funerary urn, intricately painted with scenes from its inhabitant"s lifetime 250gp',
+        'A 10-foot-tall mirror set in a gem-encrusted frame 250gp',
+        'A complex bronze armillary sphere, its rings engraved with various Giant runes and prophecies 250gp',
+    ]
+  },
+  {
+    MinorMagicItem: [
+      "Bag of Beans", "Bead of Force", "Chime of Opening", "Elixir of Health", "Folding Boat", "Heward's Handy Haversack", "Horseshoes of Speed", "Necklace of Fireballs", "Oil of Etherealness", "Portable Hole", "Potion of Clairvoyance", "Potion of Diminution", "Potion of Fire Giant Strength", "Potion of Frost Giant Strength", "Potion of Gaseous Form", "Potion of Heroism", "Potion of Invulnerability", "Potion of Mind Reading", "Potion of Stone Giant Strength", "Potion of Superior Healing", "Quaal's Feather Token, Anchor", "Quaal's Feather Token, Bird", "Quaal's Feather Token, Fan", "Quaal's Feather Token, Swan Boat", "Quaal's Feather Token, Tree", "Quaal's Feather Token, Whip", "Scroll of Protection from Aberrations", "Scroll of Protection from Beasts", "Scroll of Protection from Celestials", "Scroll of Protection from Elementals", "Scroll of Protection from Fey", "Scroll of Protection from Fiends", "Scroll of Protection from Plants", "Scroll of Protection from Undead", "Spell Scroll (4th Level)", "Spell Scroll (5th Level)", "+2 Ammunition"
+    ]
+  },
+  {
+    MajorMagicItem: [
+      '+2 Rod of the Pact Keeper',
+      '+2 Wand of the War Mage',
+    	'Amulet of Health',
+    	'Armor of Vulnerability (Bludgeoning)',
+    	'Armor of Vulnerability (Piercing)',
+    	'Armor of Vulnerability (Slashing)',
+    	'Arrow-Catching Shield',
+    	'Belt of Dwarvenkind',
+    	'Belt of Hill Giant Strength',
+      'Boots of Levitation',
+    	'Boots of Speed',
+      'Bowl of Commanding Water Elementals',
+      'Bracers of Defense',
+      'Brazier of Commanding Fire Elementals',
+      'Cape of the Mountebank',
+      'Censer of Controlling Air Elementals',
+      'Cloak of Displacement',
+      'Cloak of the Bat',
+      'Cube of Force',
+      'Daern"s Instant Fortress',
+      'Dagger of Venom',
+      'Dimensional Shackles',
+      'Elven Chain',
+      'Figurine of Wondrous Power, Bronze Griffon',
+      'Figurine of Wondrous Power, Ebony Fly',
+	    'Figurine of Wondrous Power, Golden Lions',
+      'Figurine of Wondrous Power, Ivory Goats',
+      'Figurine of Wondrous Power, Marble Elephant',
+      'Figurine of Wondrous Power, Onyx Dog',
+      'Figurine of Wondrous Power, Serpentine Owl',
+      'Gem of Seeing',
+      'Glamoured Studded Leather',
+      'Helm of Teleportation',
+      'Horn of Blasting',
+      'Horn of Valhalla, Brass',
+      'Horn of Valhalla, Silver',
+      'Instrument of the Bards, Canaith Mandolin',
+      'Instrument of the Bards, Cli Lyre',
+      'Ioun Stone, Awareness',
+      'Ioun Stone, Protection',
+      'Ioun Stone, Reserve',
+      'Ioun Stone, Sustenance',
+      'Iron Bands of Bilarro',
+      'Mace of Disruption',
+      'Mace of Smiting',
+      'Mace of Terror',
+      'Mantle of Spell Resistance',
+      'Necklace of Prayer Beads',
+      'Order of the Silver Dragon +2 Shield',
+      'Periapt of Proof against Poison',
+      'Ring of Animal Influence',
+      'Ring of Evasion',
+      'Ring of Feather Falling',
+      'Ring of Free Action',
+      'Ring of Protection',
+      'Ring of Spell Storing',
+      'Ring of the Ram',
+      'Ring of X-ray Vision',
+      'Robe of Eyes',
+      'Rod of Rulership',
+      'Rope of Entanglement',
+      'Shield of Missile Attraction',
+      'Staff of Charming',
+      'Staff of Healing',
+      'Staff of Swarming Insects',
+      'Staff of the Woodlands',
+      'Staff of Withering',
+      'Stone of Controlling Earth Elementals',
+      'Sun Blade',
+      'Tentacle Rod',
+      'Wand of Binding',
+      'Wand of Enemy Detection',
+      'Wand of Fear',
+      'Wand of Fireballs',
+      'Wand of Lightning Bolts',
+      'Wand of Paralysis',
+      'Wand of Wonder',
+      'Wings of Flying',
+      '+1 Armor',
+      '+2 Shield',
+      '+2 Weapon',
+      '+2 Weapon',
+      'Berserker Axe',
+      'Dragon Slayer',
+      'Flame Tongue',
+      'Giant Slayer',
+      'Sword of Life Stealing',
+      'Sword of Wounding',
+      'Vicious Weapon',
+      'Ring of Acid Resistance',
+      'Ring of Cold Resistance',
+      'Ring of Fire Resistance',
+      'Ring of Force Resistance',
+      'Ring of Lightning Resistance',
+      'Ring of Necrotic Resistance',
+      'Ring of Poison Resistance',
+      'Ring of Psychic Resistance',
+      'Ring of Radiant Resistance',
+      'Ring of Thunder Resistance',
+      'Armor of Acid Resistance',
+      'Armor of Cold Resistance',
+      'Armor of Fire Resistance',
+      'Armor of Force Resistance',
+      'Armor of Lightning Resistance',
+      'Armor of Necrotic Resistance',
+      'Armor of Poison Resistance',
+      'Armor of Psychic Resistance',
+      'Armor of Radiant Resistance',
+      'Armor of Thunder Resistance',
+    ]
+  }
+]
+
 //FUNCTIONS BELOW
 
 function npcsimple() {
@@ -1799,3 +1959,57 @@ function dcVeryHard() {
   var newToast = new bootstrap.Toast(newToastEl);
   newToast.show();
 }
+
+function loot10() {
+  const randomIndex = Math.floor(Math.random() * lootTen.length);
+  const selectedLoot = lootTen[randomIndex];
+
+  if (randomIndex === 0) {
+    const platinumAnswer = Math.floor(Math.random() * 20) + 1;
+    const goldAnswer = Math.floor(Math.random() * 100) + 1;
+    const silverAnswer = Math.floor(Math.random() * 10) + 1;
+    const copperAnswer = Math.floor(Math.random() * 10) + 1;
+
+
+  var responseDiv = document.createElement('div');
+  responseDiv.id = 'response';
+  responseDiv.className = 'alert';
+  responseDiv.innerHTML = "Platinum: " + platinumAnswer + "<br>" + "Gold: " + goldAnswer + "<br>" + "Silver: " + silverAnswer + "<br>" + "Copper: " + copperAnswer + "<br>"
+
+  // Create the close button for the response
+  var closeButton = document.createElement('button');
+  closeButton.type = 'button';
+  closeButton.className = 'btn-close';
+  closeButton.setAttribute('aria-label', 'Close');
+  closeButton.onclick = function() {
+    responseDiv.remove(); // Remove the specific response container when the close button is clicked
+  };
+  // Append the close button to the response container
+  responseDiv.appendChild(closeButton);
+  // Add the response to the document body
+  var secondChild = document.body.childNodes[2];
+  document.body.insertBefore(responseDiv, secondChild); } else {
+    for (const key in selectedLoot) {
+      if (Array.isArray(selectedLoot[key])) {
+        const randomItem = selectedLoot[key][Math.floor(Math.random() * selectedLoot[key].length)]; 
+    var responseDiv = document.createElement('div');
+    responseDiv.id = 'response';
+    responseDiv.className = 'alert';
+    responseDiv.innerHTML = randomItem + "<br>"
+  
+    // Create the close button for the response
+    var closeButton = document.createElement('button');
+    closeButton.type = 'button';
+    closeButton.className = 'btn-close';
+    closeButton.setAttribute('aria-label', 'Close');
+    closeButton.onclick = function() {
+      responseDiv.remove(); // Remove the specific response container when the close button is clicked
+    };
+    // Append the close button to the response container
+    responseDiv.appendChild(closeButton);
+    // Add the response to the document body
+    var secondChild = document.body.childNodes[2];
+    document.body.insertBefore(responseDiv, secondChild);
+  }
+  }
+}}
