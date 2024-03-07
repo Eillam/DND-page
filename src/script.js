@@ -1812,6 +1812,43 @@ function diceTwenty() {
   newToast.show();
 }
 
+function diceHundred() {
+  const fourResult = Math.floor(Math.random() * 100) + 1;
+
+  // Check if the toast container already exists
+  var toastContainer = document.getElementById('toast-container');
+
+  // If it doesn't exist, create a new one
+  if (!toastContainer) {
+    toastContainer = document.createElement('div');
+    toastContainer.id = 'toast-container';
+    toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+    document.body.appendChild(toastContainer);
+  }
+
+  // Create a new toast
+  var toastDiv = document.createElement('div');
+  toastDiv.className = 'toast';
+  toastDiv.setAttribute('role', 'alert');
+  toastDiv.setAttribute('aria-live', 'assertive');
+  toastDiv.setAttribute('aria-atomic', 'true');
+  toastDiv.innerHTML = `<div class="toast-header">
+    <strong class="me-auto">D20 Result</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    ${fourResult}
+  </div>`;
+
+  // Append the new toast to the existing container
+  toastContainer.appendChild(toastDiv);
+
+  // Create and show the toast
+  var newToastEl = toastContainer.lastChild;
+  var newToast = new bootstrap.Toast(newToastEl);
+  newToast.show();
+}
+
 function dcEasy() {
   const fourResult = Math.floor(Math.random() * (12 - 8 + 1)) + 8;
 
