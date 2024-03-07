@@ -1180,6 +1180,30 @@ var lootFifteen = [
       'Yellow sapphire (transparent fiery yellow or yellow-green) 1000gp'
     ]
   },
+  {
+    ArtObjets: [
+      'Silver chalice set with moonstones 750gp',
+      'Silver-plated steel longsword with jet set in hilt 750gp',
+      'Carved harp of exotic wood with ivory inlay and zircon gems 750gp',
+      'Small gold idol 750gp',
+      'Gold dragon comb set with red garnets as eyes 750gp',
+      'Bottle stopper cork embossed with gold leaf and set with amethysts 750gp',
+      'Ceremonial electrum dagger with a black pearl in the pommel 750gp',
+      'Silver and gold brooch 750gp',
+      'Obsidian statuette with gold fittings and inlay 750gp',
+      'Painted gold war mask 750gp',
+    ]
+  },
+  {
+    MinorMagicItem: [
+      "Bag of Devouring", "Horseshoes of a Zephyr", "Nolzur's Marvelous Pigments", "Oil of Sharpness", "Potion of Cloud Giant Strength", "Potion of Flying", "Potion of Invisibility", "Potion of Longevity", "Potion of Speed", "Potion of Supreme Healing", "Potion of Vitality", "Spell Scroll (6th Level)", "Spell Scroll (7th Level)", "Spell Scroll (8th Level)", "+3 Ammunition", "Arrow of Slaying (*)"
+    ]
+  },
+  {
+    MajorMagicItem: [
+    "+3 Rod of the Pact Keeper", "+3 Wand of the War Mage", "Amulet of the Planes", "Animated Shield", "Belt of Fire Giant Strength", "Belt of Frost Giant Strength", "Belt of Stone Giant Strength", "Black Dragon Scale Mail", "Blue Dragon Scale Mail", "Brass Dragon Scale Mail", "Bronze Dragon Scale Mail", "Candle of Invocation", "Carpet of Flying, 6 ft. by 9 ft.", "Cloak of Arachnida", "Copper Dragon Scale Mail", "Crystal Ball", "Demon Armor", "Dwarven Plate", "Dwarven Thrower", "Efreeti Bottle", "Figurine of Wondrous Power, Obsidian Steed", "Gold Dragon Scale Mail", "Green Dragon Scale Mail", "Helm of Brilliance", "Horn of Valhalla, Bronze", "Instrument of the Bards, Anstruth Harp", "Ioun Stone, Absorption", "Ioun Stone, Agility", "Ioun Stone, Fortitude", "Ioun Stone, Insight", "Ioun Stone, Intellect", "Ioun Stone, Leadership", "Ioun Stone, Strength", "Manual of Bodily Health", "Manual of Clay Golems", "Manual of Flesh Golems", "Manual of Gainful Exercise", "Manual of Iron Golems", "Manual of Quickness of Action", "Manual of Stone Golems", "Mirror of Life Trapping", "Oathbow", "Red Dragon Scale Mail", "Ring of Regeneration", "Ring of Shooting Stars", "Ring of Telekinesis", "Robe of Scintillating Colors", "Robe of Stars", "Rod of Absorption", "Rod of Alertness", "Rod of Security", "Scimitar of Speed", "Silver Dragon Scale Mail", "Spellguard Shield", "Staff of Fire", "Staff of Frost", "Staff of Power", "Staff of Striking", "Staff of Thunder and Lightning", "Tome of Clear Thought", "Tome of Leadership and Influence", "Tome of Understanding", "Wand of Polymorph", "White Dragon Scale Mail", "+2 Armor", "+3 Shield (*)", "+3 Weapon", "+3 Weapon (no damage)", "Dancing Sword", "Frost Brand", "Nine Lives Stealer", "Sword of Sharpness",
+    ]
+  }
 ]
 //FUNCTIONS BELOW
 
