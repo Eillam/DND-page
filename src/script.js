@@ -1161,6 +1161,26 @@ var lootTen = [
   }
 ]
 
+var lootFifteen = [
+  {
+    Platinum: [],
+    Gold: [],
+    Silver: [],
+    Copper: [],
+  },
+  {
+    Gemstones: [
+      'Black opal (translucent dark green with black mottling and golden flecks) 1000gp',
+      'Blue sapphire (transparent blue-white to medium blue) 1000gp',
+      'Emerald (transparent deep bright green) 1000gp',
+       'Fire opal (translucent fiery red) 1000gp',
+      'Opal (translucent pale blue with green and golden mottling) 1000gp',
+      'Star ruby (translucent ruby with white star-shaped center) 1000gp',
+      'Star sapphire (translucent blue sapphire with white star-shaped center) 1000gp',
+      'Yellow sapphire (transparent fiery yellow or yellow-green) 1000gp'
+    ]
+  },
+]
 //FUNCTIONS BELOW
 
 function npcsimple() {
@@ -2004,6 +2024,60 @@ function loot10() {
   if (randomIndex === 0) {
     const platinumAnswer = Math.floor(Math.random() * 20) + 1;
     const goldAnswer = Math.floor(Math.random() * 100) + 1;
+    const silverAnswer = Math.floor(Math.random() * 10) + 1;
+    const copperAnswer = Math.floor(Math.random() * 10) + 1;
+
+
+  var responseDiv = document.createElement('div');
+  responseDiv.id = 'response';
+  responseDiv.className = 'alert';
+  responseDiv.innerHTML = "Platinum: " + platinumAnswer + "<br>" + "Gold: " + goldAnswer + "<br>" + "Silver: " + silverAnswer + "<br>" + "Copper: " + copperAnswer + "<br>"
+
+  // Create the close button for the response
+  var closeButton = document.createElement('button');
+  closeButton.type = 'button';
+  closeButton.className = 'btn-close';
+  closeButton.setAttribute('aria-label', 'Close');
+  closeButton.onclick = function() {
+    responseDiv.remove(); // Remove the specific response container when the close button is clicked
+  };
+  // Append the close button to the response container
+  responseDiv.appendChild(closeButton);
+  // Add the response to the document body
+  var secondChild = document.body.childNodes[2];
+  document.body.insertBefore(responseDiv, secondChild); } else {
+    for (const key in selectedLoot) {
+      if (Array.isArray(selectedLoot[key])) {
+        const randomItem = selectedLoot[key][Math.floor(Math.random() * selectedLoot[key].length)]; 
+    var responseDiv = document.createElement('div');
+    responseDiv.id = 'response';
+    responseDiv.className = 'alert';
+    responseDiv.innerHTML = randomItem + "<br>"
+  
+    // Create the close button for the response
+    var closeButton = document.createElement('button');
+    closeButton.type = 'button';
+    closeButton.className = 'btn-close';
+    closeButton.setAttribute('aria-label', 'Close');
+    closeButton.onclick = function() {
+      responseDiv.remove(); // Remove the specific response container when the close button is clicked
+    };
+    // Append the close button to the response container
+    responseDiv.appendChild(closeButton);
+    // Add the response to the document body
+    var secondChild = document.body.childNodes[2];
+    document.body.insertBefore(responseDiv, secondChild);
+  }
+  }
+}}
+
+function loot15() {
+  const randomIndex = Math.floor(Math.random() * lootFifteen.length);
+  const selectedLoot = lootFifteen[randomIndex];
+
+  if (randomIndex === 0) {
+    const platinumAnswer = Math.floor(Math.random() * 50) + 1;
+    const goldAnswer = Math.floor(Math.random() * 1000) + 1;
     const silverAnswer = Math.floor(Math.random() * 10) + 1;
     const copperAnswer = Math.floor(Math.random() * 10) + 1;
 
