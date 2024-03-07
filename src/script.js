@@ -1205,6 +1205,51 @@ var lootFifteen = [
     ]
   }
 ]
+
+var lootTwenty = [
+  {
+    Platinum: [],
+    Gold: [],
+    Silver: [],
+    Copper: [],
+  },
+  {
+    Gemstones: [
+      'Black sapphire (translucent lustrous black with glowing highlights) 5000gp',
+      'Diamond (transparent blue-white, canary, pink, brown, or blue) 5000gp',
+      'Jacinth (transparent fiery orange) 5000gp',
+      'Ruby (transparent clear red to deep crimson) 5000gp'
+    ]
+  },
+  {
+    ArtObjets: [
+      'Fine gold chain set with a fire opal 2500gp',
+      'Old masterpiece painting 2500gp',
+      'Embroidered silk and velvet mantle set with numerous moonstones 2500gp',
+      'Platinum bracelet set with a sapphire 2500gp',
+      'Embroidered glove set with jewel chips 2500gp',
+      'Jeweled anklet 2500gp',
+      'Gold music box 2500gp',
+      'Gold circlet set with four aquamarines 2500gp',
+      'Eye patch with a mock eye set in blue sapphire and moonstone 2500gp',
+      'A necklace string of small pink pearls 2500gp'
+    ]
+  },
+  {
+    MinorMagicItem: [
+      'Potion of Storm Giant Strength',
+      'Sovereign Glue',
+      'Spell Scroll (9th Level)',
+      'Universal Solvent',
+    ]
+  },
+  {
+    MajorMagicItem: [
+      "Apparatus of Kwalish", "Armor of Invulnerability", "Belt of Cloud Giant Strength", "Belt of Storm Giant Strength", "Cloak of Invisibility", "Crystal Ball of Mind Reading", "Crystal Ball of Telepathy", "Crystal Ball of True Seeing", "Cubic Gate", "Deck of Many Things", "Efreeti Chain", "Hammer of Thunderbolts", "Horn of Valhalla, Iron", "Instrument of the Bards, Ollamh Harp", "Ioun Stone, Greater Absorption", "Ioun Stone, Mastery", "Ioun Stone, Regeneration", "Iron Flask", "Plate Armor of Etherealness", "Ring of Air Elemental Command", "Ring of Djinni Summoning", "Ring of Earth Elemental Command", "Ring of Fire Elemental Command", "Ring of Invisibility", "Ring of Spell Turning", "Ring of Three Wishes", "Ring of Water Elemental Command", "Robe of the Archmagi", "Rod of Lordly Might", "Rod of Resurrection", "Scarab of Protection", "Sphere of Annihilation", "Staff of the Magi", "Sword of Answering (Answerer)", "Sword of Answering (Back Talker)", "Sword of Answering (Concluder)", "Sword of Answering (Last Quip)", "Sword of Answering (Rebutter)", "Sword of Answering (Replier)", "Sword of Answering (Retorter)", "Sword of Answering (Scather)", "Sword of Answering (Squelcher)", "Talisman of Pure Good", "Talisman of the Sphere", "Talisman of Ultimate Evil", "Tome of the Stilled Tongue", "Well of Many Worlds", "+3 Armor", "Defender", "Holy Avenger", "Luck Blade", "Vorpal Sword"
+    ]
+  }
+]
+
 //FUNCTIONS BELOW
 
 function npcsimple() {
@@ -2102,6 +2147,60 @@ function loot15() {
   if (randomIndex === 0) {
     const platinumAnswer = Math.floor(Math.random() * 50) + 1;
     const goldAnswer = Math.floor(Math.random() * 1000) + 1;
+    const silverAnswer = Math.floor(Math.random() * 10) + 1;
+    const copperAnswer = Math.floor(Math.random() * 10) + 1;
+
+
+  var responseDiv = document.createElement('div');
+  responseDiv.id = 'response';
+  responseDiv.className = 'alert';
+  responseDiv.innerHTML = "Platinum: " + platinumAnswer + "<br>" + "Gold: " + goldAnswer + "<br>" + "Silver: " + silverAnswer + "<br>" + "Copper: " + copperAnswer + "<br>"
+
+  // Create the close button for the response
+  var closeButton = document.createElement('button');
+  closeButton.type = 'button';
+  closeButton.className = 'btn-close';
+  closeButton.setAttribute('aria-label', 'Close');
+  closeButton.onclick = function() {
+    responseDiv.remove(); // Remove the specific response container when the close button is clicked
+  };
+  // Append the close button to the response container
+  responseDiv.appendChild(closeButton);
+  // Add the response to the document body
+  var secondChild = document.body.childNodes[2];
+  document.body.insertBefore(responseDiv, secondChild); } else {
+    for (const key in selectedLoot) {
+      if (Array.isArray(selectedLoot[key])) {
+        const randomItem = selectedLoot[key][Math.floor(Math.random() * selectedLoot[key].length)]; 
+    var responseDiv = document.createElement('div');
+    responseDiv.id = 'response';
+    responseDiv.className = 'alert';
+    responseDiv.innerHTML = randomItem + "<br>"
+  
+    // Create the close button for the response
+    var closeButton = document.createElement('button');
+    closeButton.type = 'button';
+    closeButton.className = 'btn-close';
+    closeButton.setAttribute('aria-label', 'Close');
+    closeButton.onclick = function() {
+      responseDiv.remove(); // Remove the specific response container when the close button is clicked
+    };
+    // Append the close button to the response container
+    responseDiv.appendChild(closeButton);
+    // Add the response to the document body
+    var secondChild = document.body.childNodes[2];
+    document.body.insertBefore(responseDiv, secondChild);
+  }
+  }
+}}
+
+function loot20() {
+  const randomIndex = Math.floor(Math.random() * lootTwenty.length);
+  const selectedLoot = lootTwenty[randomIndex];
+
+  if (randomIndex === 0) {
+    const platinumAnswer = Math.floor(Math.random() * 200) + 1;
+    const goldAnswer = Math.floor(Math.random() * 5000) + 1;
     const silverAnswer = Math.floor(Math.random() * 10) + 1;
     const copperAnswer = Math.floor(Math.random() * 10) + 1;
 
