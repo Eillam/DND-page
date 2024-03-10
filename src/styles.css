@@ -18,13 +18,12 @@ header {
     border-radius: 20px;
     justify-content: space-evenly;
     align-items: center;
+    text-align: center;
 }
 
 #bannerbutton {
-    height: 50%;
     display: flex; /* Enables flexbox */
     align-items: center;
-    
 }
 
 #response {

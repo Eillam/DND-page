@@ -1268,13 +1268,35 @@ function npcsimple() {
   var responseDiv = document.createElement('div');
   responseDiv.id = 'response';
   responseDiv.className = 'alert';
+  responseDiv.style.position = 'relative';
   responseDiv.innerHTML = '"' + randomName + '"' + "<br>" + 'A ' + randomPhysicalTraits+ ' ' + selectedRace.Race + '.' + "<br>" + randomObject + '.' + "<br>" + 'They look ' + randomMood + '.' + "<br>"
+
+      // Create the copy button
+      var copyButton = document.createElement('button');
+      copyButton.className = 'fa fa-clipboard';
+      copyButton.style.position = 'absolute';
+      copyButton.style.top = '8.5px'; // Adjust top position as needed
+      copyButton.style.right = '40px'; // Adjust right position as needed
+      // Add functionality to copy text to clipboard on click
+      copyButton.onclick = function() {
+        var textToCopy = responseDiv.textContent;
+        navigator.clipboard.writeText(textToCopy).then(function() {
+          console.log('Text copied to clipboard!');
+        }, function(err) {
+          console.error('Failed to copy text:', err);
+        });
+      };
+    // Append the copy button to the response container
+      responseDiv.appendChild(copyButton);
 
   // Create the close button for the response
   var closeButton = document.createElement('button');
   closeButton.type = 'button';
   closeButton.className = 'btn-close';
   closeButton.setAttribute('aria-label', 'Close');
+  closeButton.style.position = 'absolute';
+  closeButton.style.top = '5px'; // Adjust top position as needed
+  closeButton.style.right = '5px'; // Adjust right position as needed
   closeButton.onclick = function() {
     responseDiv.remove(); // Remove the specific response container when the close button is clicked
   };
@@ -1298,6 +1320,7 @@ function small2() {
     var responseDiv = document.createElement('div');
     responseDiv.className = 'alert';
     responseDiv.id = 'response';
+    responseDiv.style.position = 'relative';
     // Construct the content of the response
     responseDiv.innerHTML = "<ul style='list-style: none;'>" +
       "<li>Town: " + randomTownName + "</li>" +
@@ -1306,11 +1329,32 @@ function small2() {
       "<li>Unique Location: " + randomUniqueLocation + "</li>" +
       "</ul>";
   
+      // Create the copy button
+      var copyButton = document.createElement('button');
+      copyButton.className = 'fa fa-clipboard';
+      copyButton.style.position = 'absolute';
+      copyButton.style.top = '8.5px'; // Adjust top position as needed
+      copyButton.style.right = '40px'; // Adjust right position as needed
+      // Add functionality to copy text to clipboard on click
+      copyButton.onclick = function() {
+        var textToCopy = responseDiv.textContent;
+        navigator.clipboard.writeText(textToCopy).then(function() {
+          console.log('Text copied to clipboard!');
+        }, function(err) {
+          console.error('Failed to copy text:', err);
+        });
+      };
+    // Append the copy button to the response container
+      responseDiv.appendChild(copyButton);
+
     // Create the close button for the response
     var closeButton = document.createElement('button');
     closeButton.type = 'button';
     closeButton.className = 'btn-close';
     closeButton.setAttribute('aria-label', 'Close');
+    closeButton.style.position = 'absolute';
+    closeButton.style.top = '5px'; // Adjust top position as needed
+    closeButton.style.right = '5px'; // Adjust right position as needed
     closeButton.onclick = function() {
       responseDiv.remove(); // Remove the specific response container when the close button is clicked
     };
@@ -1364,6 +1408,7 @@ while (randomStoreAndName.length < 3) {
   var responseDiv = document.createElement('div');
   responseDiv.className = 'alert';
   responseDiv.id = 'response';
+  responseDiv.style.position = 'relative';
   responseDiv.innerHTML = "<ul style='list-style: none;'>" +
   "<li>Town: " + randomTownName + "</li>" +
   "<li>Inn: " + innNames[randomInns[0]] + "</li>" +
@@ -1380,11 +1425,32 @@ while (randomStoreAndName.length < 3) {
                          "<li>Unique Location: " + randomUniqueLocation + "</li>" +
                          "</ul>";
 
-                         // Create the close button for the response
+      // Create the copy button
+      var copyButton = document.createElement('button');
+      copyButton.className = 'fa fa-clipboard';
+      copyButton.style.position = 'absolute';
+      copyButton.style.top = '8.5px'; // Adjust top position as needed
+      copyButton.style.right = '40px'; // Adjust right position as needed
+      // Add functionality to copy text to clipboard on click
+      copyButton.onclick = function() {
+        var textToCopy = responseDiv.textContent;
+        navigator.clipboard.writeText(textToCopy).then(function() {
+          console.log('Text copied to clipboard!');
+        }, function(err) {
+          console.error('Failed to copy text:', err);
+        });
+      };
+    // Append the copy button to the response container
+      responseDiv.appendChild(copyButton);
+
+// Create the close button for the response
     var closeButton = document.createElement('button');
     closeButton.type = 'button';
     closeButton.className = 'btn-close';
     closeButton.setAttribute('aria-label', 'Close');
+    closeButton.style.position = 'absolute';
+    closeButton.style.top = '5px'; // Adjust top position as needed
+    closeButton.style.right = '5px'; // Adjust right position as needed
     closeButton.onclick = function() {
       responseDiv.remove(); // Remove the specific response container when the close button is clicked
     };
@@ -1452,6 +1518,7 @@ function large2() {
   var responseDiv = document.createElement('div');
   responseDiv.className = 'alert';
   responseDiv.id = 'response';
+  responseDiv.style.position = 'relative';
   responseDiv.innerHTML = "<ul style='list-style: none;'>" +
   "<li>Town: " + randomTownName + "</li>" +
   "<li>Inn: " + innNames[randomInns[0]] + "</li>" +
@@ -1478,11 +1545,33 @@ function large2() {
                          "<li>" + randomStoreAndName[7].Type + ": " + randomStoreAndName[7].Name +"</li>" +
                          "<li>Unique Location: " + randomUniqueLocation + "</li>" +
                          "</ul>";
-                                                  // Create the close button for the response
+
+      // Create the copy button
+      var copyButton = document.createElement('button');
+      copyButton.className = 'fa fa-clipboard';
+      copyButton.style.position = 'absolute';
+      copyButton.style.top = '8.5px'; // Adjust top position as needed
+      copyButton.style.right = '40px'; // Adjust right position as needed
+      // Add functionality to copy text to clipboard on click
+      copyButton.onclick = function() {
+        var textToCopy = responseDiv.textContent;
+        navigator.clipboard.writeText(textToCopy).then(function() {
+          console.log('Text copied to clipboard!');
+        }, function(err) {
+          console.error('Failed to copy text:', err);
+        });
+      };
+    // Append the copy button to the response container
+      responseDiv.appendChild(copyButton);
+
+// Create the close button for the response
     var closeButton = document.createElement('button');
     closeButton.type = 'button';
     closeButton.className = 'btn-close';
     closeButton.setAttribute('aria-label', 'Close');
+    closeButton.style.position = 'absolute';
+    closeButton.style.top = '5px'; // Adjust top position as needed
+    closeButton.style.right = '5px'; // Adjust right position as needed
     closeButton.onclick = function() {
       responseDiv.remove(); // Remove the specific response container when the close button is clicked
     };
@@ -1503,12 +1592,35 @@ function weather2() {
     var responseDiv = document.createElement('div');
     responseDiv.id = 'response';
     responseDiv.className = 'alert';
+    responseDiv.style.position = 'relative';
     responseDiv.innerHTML = weatherConditions[randomIndex] + "<br>"
+
+      // Create the copy button
+  var copyButton = document.createElement('button');
+  copyButton.className = 'fa fa-clipboard';
+  copyButton.style.position = 'absolute';
+  copyButton.style.top = '8.5px'; // Adjust top position as needed
+  copyButton.style.right = '40px'; // Adjust right position as needed
+  // Add functionality to copy text to clipboard on click
+  copyButton.onclick = function() {
+    var textToCopy = responseDiv.textContent;
+    navigator.clipboard.writeText(textToCopy).then(function() {
+      console.log('Text copied to clipboard!');
+    }, function(err) {
+      console.error('Failed to copy text:', err);
+    });
+  };
+// Append the copy button to the response container
+  responseDiv.appendChild(copyButton);
+
     // Create the close button for the response
     var closeButton = document.createElement('button');
     closeButton.type = 'button';
     closeButton.className = 'btn-close';
     closeButton.setAttribute('aria-label', 'Close');
+    closeButton.style.position = 'absolute';
+    closeButton.style.top = '5px'; // Adjust top position as needed
+    closeButton.style.right = '5px'; // Adjust right position as needed
     closeButton.onclick = function() {
       responseDiv.remove(); // Remove the specific response container when the close button is clicked
     };
@@ -1943,13 +2055,35 @@ function loot5() {
   var responseDiv = document.createElement('div');
   responseDiv.id = 'response';
   responseDiv.className = 'alert';
+  responseDiv.style.position = 'relative';
   responseDiv.innerHTML = "Platinum: " + platinumAnswer + "<br>" + "Gold: " + goldAnswer + "<br>" + "Silver: " + silverAnswer + "<br>" + "Copper: " + copperAnswer + "<br>"
+
+  // Create the copy button for the response
+  var copyButton = document.createElement('button');
+  copyButton.className = 'fa fa-clipboard';
+  copyButton.style.position = 'absolute';
+  copyButton.style.top = '8.5px'; // Adjust top position as needed
+  copyButton.style.right = '40px'; // Adjust right position as needed
+  // Add functionality to copy text to clipboard on click
+  copyButton.onclick = function() {
+    var textToCopy = responseDiv.textContent;
+    navigator.clipboard.writeText(textToCopy).then(function() {
+      console.log('Text copied to clipboard!');
+    }, function(err) {
+      console.error('Failed to copy text:', err);
+    });
+  };
+// Append the copy button to the response container
+  responseDiv.appendChild(copyButton);
 
   // Create the close button for the response
   var closeButton = document.createElement('button');
   closeButton.type = 'button';
   closeButton.className = 'btn-close';
   closeButton.setAttribute('aria-label', 'Close');
+  closeButton.style.position = 'absolute';
+  closeButton.style.top = '5px'; // Adjust top position as needed
+  closeButton.style.right = '5px'; // Adjust right position as needed
   closeButton.onclick = function() {
     responseDiv.remove(); // Remove the specific response container when the close button is clicked
   };
@@ -1964,13 +2098,35 @@ function loot5() {
     var responseDiv = document.createElement('div');
     responseDiv.id = 'response';
     responseDiv.className = 'alert';
+    responseDiv.style.position = 'relative';
     responseDiv.innerHTML = randomItem + "<br>"
   
+    // Create the copy button for the response
+    var copyButton = document.createElement('button');
+    copyButton.className = 'fa fa-clipboard';
+    copyButton.style.position = 'absolute';
+    copyButton.style.top = '8.5px'; // Adjust top position as needed
+    copyButton.style.right = '40px'; // Adjust right position as needed
+    // Add functionality to copy text to clipboard on click
+    copyButton.onclick = function() {
+      var textToCopy = responseDiv.textContent;
+      navigator.clipboard.writeText(textToCopy).then(function() {
+        console.log('Text copied to clipboard!');
+      }, function(err) {
+        console.error('Failed to copy text:', err);
+      });
+    };
+  // Append the copy button to the response container
+    responseDiv.appendChild(copyButton);
+
     // Create the close button for the response
     var closeButton = document.createElement('button');
     closeButton.type = 'button';
     closeButton.className = 'btn-close';
     closeButton.setAttribute('aria-label', 'Close');
+    closeButton.style.position = 'absolute';
+    closeButton.style.top = '5px'; // Adjust top position as needed
+    closeButton.style.right = '5px'; // Adjust right position as needed
     closeButton.onclick = function() {
       responseDiv.remove(); // Remove the specific response container when the close button is clicked
     };
@@ -1997,13 +2153,35 @@ function loot10() {
   var responseDiv = document.createElement('div');
   responseDiv.id = 'response';
   responseDiv.className = 'alert';
+  responseDiv.style.position = 'relative';
   responseDiv.innerHTML = "Platinum: " + platinumAnswer + "<br>" + "Gold: " + goldAnswer + "<br>" + "Silver: " + silverAnswer + "<br>" + "Copper: " + copperAnswer + "<br>"
+
+  // Create the copy button for the response
+  var copyButton = document.createElement('button');
+  copyButton.className = 'fa fa-clipboard';
+  copyButton.style.position = 'absolute';
+  copyButton.style.top = '8.5px'; // Adjust top position as needed
+  copyButton.style.right = '40px'; // Adjust right position as needed
+  // Add functionality to copy text to clipboard on click
+  copyButton.onclick = function() {
+    var textToCopy = responseDiv.textContent;
+    navigator.clipboard.writeText(textToCopy).then(function() {
+      console.log('Text copied to clipboard!');
+    }, function(err) {
+      console.error('Failed to copy text:', err);
+    });
+  };
+// Append the copy button to the response container
+  responseDiv.appendChild(copyButton);
 
   // Create the close button for the response
   var closeButton = document.createElement('button');
   closeButton.type = 'button';
   closeButton.className = 'btn-close';
   closeButton.setAttribute('aria-label', 'Close');
+  closeButton.style.position = 'absolute';
+  closeButton.style.top = '5px'; // Adjust top position as needed
+  closeButton.style.right = '5px'; // Adjust right position as needed
   closeButton.onclick = function() {
     responseDiv.remove(); // Remove the specific response container when the close button is clicked
   };
@@ -2018,13 +2196,35 @@ function loot10() {
     var responseDiv = document.createElement('div');
     responseDiv.id = 'response';
     responseDiv.className = 'alert';
+    responseDiv.style.position = 'relative';
     responseDiv.innerHTML = randomItem + "<br>"
   
+    // Create the copy button for the response
+    var copyButton = document.createElement('button');
+    copyButton.className = 'fa fa-clipboard';
+    copyButton.style.position = 'absolute';
+    copyButton.style.top = '8.5px'; // Adjust top position as needed
+    copyButton.style.right = '40px'; // Adjust right position as needed
+    // Add functionality to copy text to clipboard on click
+    copyButton.onclick = function() {
+      var textToCopy = responseDiv.textContent;
+      navigator.clipboard.writeText(textToCopy).then(function() {
+        console.log('Text copied to clipboard!');
+      }, function(err) {
+        console.error('Failed to copy text:', err);
+      });
+    };
+  // Append the copy button to the response container
+    responseDiv.appendChild(copyButton);
+
     // Create the close button for the response
     var closeButton = document.createElement('button');
     closeButton.type = 'button';
     closeButton.className = 'btn-close';
     closeButton.setAttribute('aria-label', 'Close');
+    closeButton.style.position = 'absolute';
+    closeButton.style.top = '5px'; // Adjust top position as needed
+    closeButton.style.right = '5px'; // Adjust right position as needed
     closeButton.onclick = function() {
       responseDiv.remove(); // Remove the specific response container when the close button is clicked
     };
@@ -2051,13 +2251,35 @@ function loot15() {
   var responseDiv = document.createElement('div');
   responseDiv.id = 'response';
   responseDiv.className = 'alert';
+  responseDiv.style.position = 'relative';
   responseDiv.innerHTML = "Platinum: " + platinumAnswer + "<br>" + "Gold: " + goldAnswer + "<br>" + "Silver: " + silverAnswer + "<br>" + "Copper: " + copperAnswer + "<br>"
+
+  // Create the copy button for the response
+  var copyButton = document.createElement('button');
+  copyButton.className = 'fa fa-clipboard';
+  copyButton.style.position = 'absolute';
+  copyButton.style.top = '8.5px'; // Adjust top position as needed
+  copyButton.style.right = '40px'; // Adjust right position as needed
+  // Add functionality to copy text to clipboard on click
+  copyButton.onclick = function() {
+    var textToCopy = responseDiv.textContent;
+    navigator.clipboard.writeText(textToCopy).then(function() {
+      console.log('Text copied to clipboard!');
+    }, function(err) {
+      console.error('Failed to copy text:', err);
+    });
+  };
+// Append the copy button to the response container
+  responseDiv.appendChild(copyButton);
 
   // Create the close button for the response
   var closeButton = document.createElement('button');
   closeButton.type = 'button';
   closeButton.className = 'btn-close';
   closeButton.setAttribute('aria-label', 'Close');
+  closeButton.style.position = 'absolute';
+  closeButton.style.top = '5px'; // Adjust top position as needed
+  closeButton.style.right = '5px'; // Adjust right position as needed
   closeButton.onclick = function() {
     responseDiv.remove(); // Remove the specific response container when the close button is clicked
   };
@@ -2072,13 +2294,35 @@ function loot15() {
     var responseDiv = document.createElement('div');
     responseDiv.id = 'response';
     responseDiv.className = 'alert';
+    responseDiv.style.position = 'relative';
     responseDiv.innerHTML = randomItem + "<br>"
   
+    // Create the copy button for the response
+    var copyButton = document.createElement('button');
+    copyButton.className = 'fa fa-clipboard';
+    copyButton.style.position = 'absolute';
+    copyButton.style.top = '8.5px'; // Adjust top position as needed
+    copyButton.style.right = '40px'; // Adjust right position as needed
+    // Add functionality to copy text to clipboard on click
+    copyButton.onclick = function() {
+      var textToCopy = responseDiv.textContent;
+      navigator.clipboard.writeText(textToCopy).then(function() {
+        console.log('Text copied to clipboard!');
+      }, function(err) {
+        console.error('Failed to copy text:', err);
+      });
+    };
+  // Append the copy button to the response container
+    responseDiv.appendChild(copyButton);
+
     // Create the close button for the response
     var closeButton = document.createElement('button');
     closeButton.type = 'button';
     closeButton.className = 'btn-close';
     closeButton.setAttribute('aria-label', 'Close');
+    closeButton.style.position = 'absolute';
+    closeButton.style.top = '5px'; // Adjust top position as needed
+    closeButton.style.right = '5px'; // Adjust right position as needed
     closeButton.onclick = function() {
       responseDiv.remove(); // Remove the specific response container when the close button is clicked
     };
@@ -2105,13 +2349,35 @@ function loot20() {
   var responseDiv = document.createElement('div');
   responseDiv.id = 'response';
   responseDiv.className = 'alert';
+  responseDiv.style.position = 'relative';
   responseDiv.innerHTML = "Platinum: " + platinumAnswer + "<br>" + "Gold: " + goldAnswer + "<br>" + "Silver: " + silverAnswer + "<br>" + "Copper: " + copperAnswer + "<br>"
+
+  // Create the copy button for the response
+  var copyButton = document.createElement('button');
+  copyButton.className = 'fa fa-clipboard';
+  copyButton.style.position = 'absolute';
+  copyButton.style.top = '8.5px'; // Adjust top position as needed
+  copyButton.style.right = '40px'; // Adjust right position as needed
+  // Add functionality to copy text to clipboard on click
+  copyButton.onclick = function() {
+    var textToCopy = responseDiv.textContent;
+    navigator.clipboard.writeText(textToCopy).then(function() {
+      console.log('Text copied to clipboard!');
+    }, function(err) {
+      console.error('Failed to copy text:', err);
+    });
+  };
+// Append the copy button to the response container
+  responseDiv.appendChild(copyButton);
 
   // Create the close button for the response
   var closeButton = document.createElement('button');
   closeButton.type = 'button';
   closeButton.className = 'btn-close';
   closeButton.setAttribute('aria-label', 'Close');
+  closeButton.style.position = 'absolute';
+  closeButton.style.top = '5px'; // Adjust top position as needed
+  closeButton.style.right = '5px'; // Adjust right position as needed
   closeButton.onclick = function() {
     responseDiv.remove(); // Remove the specific response container when the close button is clicked
   };
@@ -2126,13 +2392,35 @@ function loot20() {
     var responseDiv = document.createElement('div');
     responseDiv.id = 'response';
     responseDiv.className = 'alert';
+    responseDiv.style.position = 'relative';
     responseDiv.innerHTML = randomItem + "<br>"
+
+    // Create the copy button for the response
+    var copyButton = document.createElement('button');
+    copyButton.className = 'fa fa-clipboard';
+    copyButton.style.position = 'absolute';
+    copyButton.style.top = '8.5px'; // Adjust top position as needed
+    copyButton.style.right = '40px'; // Adjust right position as needed
+    // Add functionality to copy text to clipboard on click
+    copyButton.onclick = function() {
+      var textToCopy = responseDiv.textContent;
+      navigator.clipboard.writeText(textToCopy).then(function() {
+        console.log('Text copied to clipboard!');
+      }, function(err) {
+        console.error('Failed to copy text:', err);
+      });
+    };
+  // Append the copy button to the response container
+    responseDiv.appendChild(copyButton);
   
     // Create the close button for the response
     var closeButton = document.createElement('button');
     closeButton.type = 'button';
     closeButton.className = 'btn-close';
     closeButton.setAttribute('aria-label', 'Close');
+    closeButton.style.position = 'absolute';
+    closeButton.style.top = '5px'; // Adjust top position as needed
+    closeButton.style.right = '5px'; // Adjust right position as needed
     closeButton.onclick = function() {
       responseDiv.remove(); // Remove the specific response container when the close button is clicked
     };
