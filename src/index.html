@@ -14,18 +14,21 @@
         GMA
       </h1>
       <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" id="dcClass">
-        <div class="btn-group me-2" role="group" aria-label="First group"></div>
+        <div class="btn-group me-2" role="group" aria-label="First group">
           <button type="button" class="btn btn-light btn-sm" id="bannerbutton" onclick="dcEasy()">DC Easy</button>
           <button type="button" class="btn btn-light btn-sm" id="bannerbutton" onclick="dcMedium()">DC Medium</button>
           <button type="button" class="btn btn-light btn-sm" id="bannerbutton" onclick="dcHard()">DC Hard</button>
           <button type="button" class="btn btn-light btn-sm" id="bannerbutton" onclick="dcVeryHard()">DC Very Hard</button>
         </div>
-          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-          Dice
-          </button>
+      </div>
+      <div class="dice-toggle float-end">
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Dice
+        </button>
+      </div>
     </header>
     <div class="collapse" id="collapseExample">
-      <div class="card card-body">
+      <div class="card card-body" id="dice">
         <div class="row">
           <div class="col-lg">
             <button type="button" class="btn btn-light btn-sm" id="bannerbutton" onclick="diceFour()">D4</button>
