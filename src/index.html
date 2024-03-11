@@ -12,32 +12,45 @@
     <header>
       <h1 class="align-baseline">
         GMA
-    </h1>
-
-      <button type="button" class="btn btn-light" id="bannerbutton" onclick="dcEasy()">DC Easy</button>
-     
-      <button type="button" class="btn btn-light" id="bannerbutton" onclick="dcMedium()">DC Medium</button>
-    
-      <button type="button" class="btn btn-light" id="bannerbutton" onclick="dcHard()">DC Hard</button>
-
-      <button type="button" class="btn btn-light" id="bannerbutton" onclick="dcVeryHard()">DC Very Hard</button>
- 
-      <button type="button" class="btn btn-light" id="bannerbutton" onclick="diceFour()">D4</button>
- 
-      <button type="button" class="btn btn-light" id="bannerbutton" onclick="diceSix()">D6</button>
-  
-      <button type="button" class="btn btn-light" id="bannerbutton" onclick="diceEight()">D8</button>
-
-      <button type="button" class="btn btn-light" id="bannerbutton" onclick="diceTen()">D10</button>
-
-      <button type="button" class="btn btn-light" id="bannerbutton" onclick="diceTwelve()">D12</button>
-
-      <button type="button" class="btn btn-light" id="bannerbutton" onclick="diceTwenty()">D20</button>
-
-      <button type="button" class="btn btn-light" id="bannerbutton" onclick="diceHundred()">D100</button>
-  
-      </header>
-  </header>
+      </h1>
+      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" id="dcClass">
+        <div class="btn-group me-2" role="group" aria-label="First group"></div>
+          <button type="button" class="btn btn-light btn-sm" id="bannerbutton" onclick="dcEasy()">DC Easy</button>
+          <button type="button" class="btn btn-light btn-sm" id="bannerbutton" onclick="dcMedium()">DC Medium</button>
+          <button type="button" class="btn btn-light btn-sm" id="bannerbutton" onclick="dcHard()">DC Hard</button>
+          <button type="button" class="btn btn-light btn-sm" id="bannerbutton" onclick="dcVeryHard()">DC Very Hard</button>
+        </div>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Dice
+          </button>
+    </header>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        <div class="row">
+          <div class="col-lg">
+            <button type="button" class="btn btn-light btn-sm" id="bannerbutton" onclick="diceFour()">D4</button>
+          </div>
+          <div class="col-lg">
+            <button type="button" class="btn btn-light btn-sm" id="bannerbutton" onclick="diceSix()">D6</button>
+          </div>
+          <div class="col-lg">
+            <button type="button" class="btn btn-light btn-sm" id="bannerbutton" onclick="diceEight()">D8</button>
+          </div>
+          <div class="col-lg">
+            <button type="button" class="btn btn-light btn-sm" id="bannerbutton" onclick="diceTen()">D10</button>
+          </div>
+          <div class="col-lg">
+            <button type="button" class="btn btn-light btn-sm" id="bannerbutton" onclick="diceTwelve()">D12</button>
+          </div>
+          <div class="col-lg">
+            <button type="button" class="btn btn-light btn-sm" id="bannerbutton" onclick="diceTwenty()">D20</button>
+          </div>
+          <div class="col-lg">
+            <button type="button" class="btn btn-light btn-sm" id="bannerbutton" onclick="diceHundred()">D100</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- response div -->
   <container></container>

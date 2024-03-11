@@ -1875,7 +1875,7 @@ function diceHundred() {
   toastDiv.setAttribute('aria-live', 'assertive');
   toastDiv.setAttribute('aria-atomic', 'true');
   toastDiv.innerHTML = `<div class="toast-header">
-    <strong class="me-auto">D20 Result</strong>
+    <strong class="me-auto">D100 Result</strong>
     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
   </div>
   <div class="toast-body">
