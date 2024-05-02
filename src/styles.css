@@ -28,6 +28,7 @@ header {
     right: 1%;
     top: 5%;
     z-index: 1;
+    width: 10%;
 }
 
 #response {
@@ -35,7 +36,7 @@ header {
     background: radial-gradient(circle at 18.7% 37.8%, rgb(179, 153, 153) 0%, red 90%);
     font-weight: bold;
     font-size: 1.5rem;
-    width: 80%;
+    width: 70%;
     float: right;
     margin: 20px 5%;
 }
@@ -48,12 +49,13 @@ h5 {
 .btn-primary {
 font-size: 18px;
 border-radius: 10px;
-margin: 5px
+margin: 5px;
 }
 
-.offcanvas-title {
-    color: black;
+#Main-btn {
+    width: 150px;
 }
+
 
 #NPC-Submit {
     margin: 10px auto;
